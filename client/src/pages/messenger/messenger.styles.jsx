@@ -26,7 +26,6 @@ export const MessagesContainer = styled.div`
 
 export const MessageHeaderContainer = styled.div`
 	width: 100%;
-	background-color: orange;
 	height: 10vh;
 `;
 

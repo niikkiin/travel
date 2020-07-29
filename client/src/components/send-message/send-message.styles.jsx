@@ -22,19 +22,20 @@ export const SendMessageContainer = styled.div`
   export const InputMessage = styled.input`
   width: 100%;
 	height: 4rem;
-  padding: 1rem 2rem;
+  padding: 1rem 0 1rem 2rem;
 	color: ${textColor1};
 	border: none;
 	outline: none;
 `;
 
 export const SendFileBox = styled.div`
-  width: 10%;
+  width: 7%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
 
 	.icon {
+    
 		color: lightgray;
 		font-size: 3rem;
 		cursor: pointer;

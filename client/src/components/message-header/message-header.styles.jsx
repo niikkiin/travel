@@ -6,6 +6,7 @@ const { lightSecondaryColor, secondaryColor } = helpers;
 
 export const MessageHeaderWrapper = styled.div`
 position: relative;
+margin-left: 2rem;
 .avatar {
   width: 7rem;
   height: 7rem;
@@ -35,7 +36,8 @@ position: relative;
 export const HeaderContainer = styled.div`
   width: 100%;
   min-height: 10vh;
-  padding: 0.5rem 1rem 0.5rem 5rem;
+  padding: 0.5rem 1rem 0.5rem 7rem;
+  // margin-left: 2rem;
 	background-color: ${lightSecondaryColor};
   border: 1px solid ${secondaryColor};
   display: flex;
