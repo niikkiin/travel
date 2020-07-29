@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import { helpers } from 'utilities/styles/helpers.styles';
 
-const { successColor, lightSecondaryColor, secondaryColor } = helpers;
+const { lightSecondaryColor, secondaryColor } = helpers;
 
 export const MessageHeaderWrapper = styled.div`
 position: relative;
