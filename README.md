@@ -50,7 +50,7 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 
 ### Built using
 
-- [styled-components](https://styled-components.com/)
-- [Redux](https://redux.js.org/)
+- [styled-components](https://styled-components.com/) - for styling
+- [Redux](https://redux.js.org/) - for state management
 - [react-easy-crop](https://www.npmjs.com/package/react-easy-crop) - for image cropping
 - [react-select](https://react-select.com/) - for input tags
