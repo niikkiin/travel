@@ -1,19 +1,13 @@
 import styled from 'styled-components';
 
 export const RightSidebarContainer = styled.div`
-	// grid-column: 3/4;
-
-	// display: grid;
-	// place-items: center;
-  margin-top: 15rem;
-  display: block;
-  
-
-  position: fixed;
-  top: 0;
-  
-  right: 0;
-  min-width: 28%;
-  height: 100%;
+width: 27%;
+top: 8%;
+bottom: 0px;
+position: fixed;
+display: grid;
+place-items: center;
+height: 100%;
+right: 0;
 `;
 

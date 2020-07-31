@@ -1,25 +1,23 @@
 import React from 'react';
 
 // import { Main } from 'sections/main/main.styles';
-import { Contents } from 'layouts/layout.styles';
+import { MainContainer, Main } from 'layouts/layout.styles';
 import Header from 'sections/header/header.component';
 import { LeftSidebar } from 'sections/left-sidebar/left-sidebar.component';
 import { RightSidebar } from 'sections/right-sidebar/right-sidebar.component';
 
 const DefaultLayout = ({ children }) => {
 	return (
-		<Contents>
-			<div className='wrap'>
-				<Header />
-				<div className='main'>
-					<div className='bodywrap'>
-						<LeftSidebar />
-						<RightSidebar />
-						<div className='center'>{children}</div>
-					</div>
-				</div>
+		<MainContainer>
+			<Header />
+			<div id='content'>
+			<Main>
+				<LeftSidebar />
+				<div className='main-content'>{children}</div>
+				<RightSidebar />
+			</Main>
 			</div>
-		</Contents>
+		</MainContainer>
 	);
 };
 

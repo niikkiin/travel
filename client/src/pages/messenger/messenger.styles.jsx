@@ -17,7 +17,7 @@ export const MessagesContainer = styled.div`
 	// height: auto;
 	display: flex;
 	justify-content: space-between;
-	overflow-y: auto;
+	overflow-y: scroll;
 	.messages {
 		margin-top: auto;
 		width: 100%;

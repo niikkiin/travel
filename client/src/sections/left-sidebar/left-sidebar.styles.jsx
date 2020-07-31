@@ -1,16 +1,12 @@
 import styled from 'styled-components';
 
 export const LeftSidebarContainer = styled.div`
-  // grid-column: 1 /2;
-
-  // display: grid;
-  // place-items: center;
-  margin-top: 15rem;
-  display: block;
-
-  position: fixed;
-  top: 0;
-  left: 0;
-  min-width: 28%;
-  height: 100%;
-  `;
+	width: 27%;
+	top: 8%;
+	bottom: 0px;
+	position: fixed;
+	display: grid;
+	place-items: center;
+	height: 100%;
+	left: 0;
+`;
