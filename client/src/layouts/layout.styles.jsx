@@ -40,7 +40,7 @@ export const Contents = styled.div`
 		height: 100%;
 	}
 	.center {
-		margin: 6% 26% 1% 27%;
+		margin: 6% 27% 1% 27%;
 	}
 `;
 
