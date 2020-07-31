@@ -19,9 +19,7 @@ export const Input = styled.input`
 	padding: 0.8rem;
 	display: block;
 	width: 100%;
-	border: none;
   border: 1px solid ${secondaryColor};
-  
 	&:focus {
     outline: none;
     border: 1px solid ${accentColor};

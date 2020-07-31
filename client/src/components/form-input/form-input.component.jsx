@@ -4,7 +4,7 @@ import React from 'react';
 import { FormInputContainer, Input, Label } from 'components/form-input/form-input.styles';
 
 export const FormInput = ({ handleChange, label, ...props }) => (
-	<FormInputContainer className='desktop-breakpoint'>
+	<FormInputContainer>
 		<Input autoComplete='off' onChange={handleChange} {...props} />
 		{label ? (
 			//  className={props.value.length ? 'shrink' : ''}

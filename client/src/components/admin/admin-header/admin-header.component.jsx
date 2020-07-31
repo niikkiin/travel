@@ -23,23 +23,16 @@ function AdminHeader() {
 						<li class='menu-heading'>
 							<h3>Admin</h3>
 						</li>
-						<li>
-							<span>Posts</span>
-						</li>
+						<Link to='/ttcomt-admin'>
+							<li>
+								<span>Dashboard</span>
+							</li>
+						</Link>
 						<Link to='/ttcomt-admin/users'>
 							<li>
 								<span>Users</span>
 							</li>
 						</Link>
-						<li>
-							<span>Trends</span>
-						</li>
-						<li>
-							<span>Collection</span>
-						</li>
-						<li>
-							<span>Comments</span>
-						</li>
 						<li class='menu-heading'>
 							<h3>Settings</h3>
 						</li>
