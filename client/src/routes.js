@@ -23,6 +23,7 @@ import Details from 'pages/detail/detail.component';
 
 // admin
 import AdminPage from 'pages/admin/admin.component';
+import UserTab from 'pages/admin/user-tab/user-tab.component';
 
 export default [
 	{
@@ -110,5 +111,10 @@ export default [
 		path: '/ttcomt-admin',
 		layout: AdminLayout,
 		component: AdminPage,
+	},
+	{
+		path: '/ttcomt-admin/users',
+		layout: AdminLayout,
+		component: UserTab,
 	},
 ];

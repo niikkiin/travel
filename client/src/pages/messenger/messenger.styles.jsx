@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 
 export const MessengerContainer = styled.div`
-	margin: 0 3rem;
+	// margin: 0 3rem;
 	margin-top: 6.5rem;
 	font-size: 2rem;
 	display: grid;
@@ -12,6 +12,7 @@ export const MessengerContainer = styled.div`
 export const MessagesContainer = styled.div`
 	width: 100%;
 	background-color: #fff;
+	margin: 1rem 0;
 	padding: 0rem 2rem 0rem 2rem;
 	// height: 65vh;
 	// height: auto;

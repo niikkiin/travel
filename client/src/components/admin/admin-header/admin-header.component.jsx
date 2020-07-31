@@ -6,6 +6,7 @@ import { AdminHeaderContainer } from 'components/admin/admin-header/admin-header
 // icons
 import { Icon } from '@iconify/react';
 import bxLeftArrowAlt from '@iconify/icons-bx/bx-left-arrow-alt';
+import { Link } from 'react-router-dom';
 
 function AdminHeader() {
 	return (
@@ -25,10 +26,11 @@ function AdminHeader() {
 						<li>
 							<span>Posts</span>
 						</li>
-						<li style={{ display: 'flex'}}>
-							{/* <Icon icon={userAvatarFilled} className='li-icon' style={{ color: '#fff', fontSize: '24px', width: '2rem' }} /> */}
-							<span>Users</span>
-						</li>
+						<Link to='/ttcomt-admin/users'>
+							<li>
+								<span>Users</span>
+							</li>
+						</Link>
 						<li>
 							<span>Trends</span>
 						</li>

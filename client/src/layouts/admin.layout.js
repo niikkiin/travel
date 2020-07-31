@@ -6,10 +6,7 @@ import { MainAdminContainer } from 'layouts/layout.styles';
 // components
 import AdminHeader from 'components/admin/admin-header/admin-header.component';
 
-// icons
-import { Icon } from '@iconify/react';
-import bxSearchAlt from '@iconify/icons-bx/bx-search-alt';
-import userAvatarFilledAlt from '@iconify/icons-carbon/user-avatar-filled-alt';
+
 
 const AdminLayout = ({ children }) => {
 	return (
@@ -74,37 +71,7 @@ const AdminLayout = ({ children }) => {
 			</svg>
 			<AdminHeader />
 			<section class='page-content'>
-				<section class='search-and-user'>
-					<form>
-						<input type='search' placeholder='Search Pages...' />
-						<button type='submit' aria-label='submit form'>
-            <Icon icon={bxSearchAlt} style={{color: '#412D18', fontSize: '24px'}} />
-						</button>
-					</form>
-					<div class='admin-profile'>
-						<span class='greeting'>Hello admin</span>
-						<div class='notifications'>
-							<span class='badge'>1</span>
-							<Icon icon={userAvatarFilledAlt} style={{ color: '#412D18', fontSize: '24px' }} />
-						</div>
-					</div>
-				</section>
-				<section class='grid'>
-					<article></article>
-					<article></article>
-					<article></article>
-					<article></article>
-					<article></article>
-					<article></article>
-					<article></article>
-					<article></article>
-				</section>
-				<footer class='page-footer'>
-					<small>
-						Made with <span>❤</span> by{' '}
-						traveltagged
-					</small>
-				</footer>
+				{children}
 			</section>
 		</MainAdminContainer>
 	);

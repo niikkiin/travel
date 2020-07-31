@@ -80,7 +80,7 @@ export const AdminHeaderContainer = styled.div`
 
 	.page-header .admin-menu li:last-child {
 		margin-top: auto;
-		margin-bottom: 20px;
+		// margin-bottom: 20px;
 	}
 
 	.page-header .admin-menu li > * {
