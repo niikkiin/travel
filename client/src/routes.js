@@ -1,5 +1,8 @@
 // Layouts
 import RegistrationLayout from 'layouts/registration.layout';
+import AdminLayout from 'layouts/admin.layout';
+import { DefaultLayout } from 'layouts';
+import AccountLayout from 'layouts/account.layout';
 
 // Comopnents
 import ProfilePage from 'pages/profile/profile.component';
@@ -9,16 +12,17 @@ import { SignUpPage } from 'pages/sign-up/sign-up.component';
 import { SignInPage } from 'pages/sign-in/sign-in.component';
 import { InfoPage } from 'pages/info/info.component';
 import BusinessProfileAccount from 'pages/business-profile-account/edit-profile.component';
-import AccountLayout from 'layouts/account.layout';
 import { ChangePassword } from 'pages/business-profile-account/change-password.component';
 import { EmailAndSms } from 'pages/business-profile-account/email-and-sms.component';
 import { PushNotification } from 'pages/business-profile-account/push-notification.component';
 import { ManageContacts } from 'pages/business-profile-account/manage-contacts.component';
 import { PrivacyAndSecurity } from 'pages/business-profile-account/privacy-and-security.component';
 import { LoginActivity } from 'pages/business-profile-account/login-activity.component';
-import { DefaultLayout } from 'layouts';
 import Messenger from 'pages/messenger/messenger.component';
 import Details from 'pages/detail/detail.component';
+
+// admin
+import AdminPage from 'pages/admin/admin.component';
 
 export default [
 	{
@@ -100,5 +104,11 @@ export default [
 		path: '/login-activity',
 		layout: AccountLayout,
 		component: LoginActivity,
+	},
+	// SECTION ADMIN
+	{
+		path: '/ttcomt-admin',
+		layout: AdminLayout,
+		component: AdminPage,
 	},
 ];

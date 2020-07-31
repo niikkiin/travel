@@ -47,13 +47,44 @@ export const HeaderContainer = styled.div`
     display: flex;
     flex-direction: column;
 
+    .tags {
+      font-size: 1.1rem;
+      margin-top: 0.6rem;
+
+      span {
+        margin-right: 1rem;
+        font-weight: bold;
+      }
+    }
+
+    .main-info {
+      display: flex;
+
+      .detail-1,
+      .detail-2 {
+        font-size: 1.1rem;
+        font-weight: bold;
+      }
+      
+      .detail-2 {
+        margin: 0 0.5rem;
+        padding: 0 0.5rem;
+        margin-top:  0.1rem;
+
+        .website {
+          margin-top: 0.6rem;
+        }
+      }
+    }
+    
     .name {
       font-size: 1.4rem;
       font-weight: 700;
     }
     .time {
+      font-weight: normal;
       font-size: 1rem;
-      margin-top: 1.5rem;
+      margin-top: 0.2rem;
       font-style: italic;
     }
   }

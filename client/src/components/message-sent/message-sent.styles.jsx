@@ -25,7 +25,7 @@ margin: 1.25rem 0;
 
     background-color: ${lightBlue};
     border: 1px solid ${secondaryColor};
-    padding: 0.5rem 0.8rem;
+    padding: 0.5rem 0 0 0;
     word-break: break-word;
     border-radius: 1rem;
     font-size: 1.2rem;

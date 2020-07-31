@@ -7,7 +7,7 @@ const { lightGreen, secondaryColor } = helpers;
 export const MessageReceivedContainer = styled.div`
 display: grid;
 grid-template-columns: repeat(2, 1fr);
-justify-items: start;
+
 margin: 1.25rem 0;
 
 .with-time {

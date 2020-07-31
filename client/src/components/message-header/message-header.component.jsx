@@ -14,10 +14,22 @@ const MessageHeader = () => {
 			<div className='avatar' style={{ backgroundImage: 'url(' + profile5 + ')' }}></div>
 			<HeaderContainer>
 				<div className='name-details'>
-					<div className='name'>Samantha Smitt</div>
-					<div className='time'>Online 17 hours ago</div>
+					<div className='main-info'>
+						<div className="detail-1">
+						<div className='name'>Samantha Smitt</div>
+						<div className='time'>Online 17 hours ago</div>
+						</div>
+						<div className="detail-2">
+							<div className="location">Eco-Tours</div>
+							<div className="website">www.ecotours.com</div>
+						</div>
+					</div>
+					<div className="tags">
+						<span>#EcoTours</span>
+						<span>#Thailand</span>
+						<span>#Mangrooves</span>
+					</div>
 				</div>
-				<div className='country'>United Kingdom</div>
 				<div className='settings'>
 					<Icon icon={bxDotsVerticalRounded} className='icon' />
 				</div>

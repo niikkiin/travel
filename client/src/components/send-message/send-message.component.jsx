@@ -7,11 +7,11 @@ import { SendMessageContainer, InputMessage, SendFileBox } from 'components/send
 import { Icon } from '@iconify/react';
 import paperClip from '@iconify/icons-si-glyph/paper-clip';
 
-export const SendMessage = () => {
+export const SendMessage = ({handleChange, onKeyPress, value}) => {
 	return (
 		<SendMessageContainer>
       <div className="input-container">
-			<InputMessage type='text' placeHolder='Type message here' />
+			<InputMessage value={value} onKeyPress={onKeyPress} onChange={handleChange} type='text' placeHolder='Type message here' />
 			<SendFileBox>
 				<Icon className='icon' icon={paperClip} />
 			</SendFileBox>

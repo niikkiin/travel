@@ -12,14 +12,14 @@ export const MessengerContainer = styled.div`
 export const MessagesContainer = styled.div`
 	width: 100%;
 	background-color: #fff;
-	padding: 0rem 2rem 0.2rem 2rem;
+	padding: 0rem 2rem 0rem 2rem;
 	// height: 65vh;
 	// height: auto;
-	overflow-y: scroll;
 	display: flex;
 	justify-content: space-between;
-
+	overflow-y: auto;
 	.messages {
+		margin-top: auto;
 		width: 100%;
 	}
 `;

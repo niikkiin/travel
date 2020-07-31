@@ -17,7 +17,15 @@ export const helpers = {
 	lightBlue: '#E1F5FE',
 	lightGreen: '#F1F8E9',
 
-	
+
+	// SECTION ADMIN
+	adminSidebarColor: '#242E42',
+	adminLightColor: '#DDE9F8',
+	// adminLightBlue: 
+
+
+
+	// unused yet
 	warningColor: '#E69316',
 	dangerColor: '#BE174E',
 	successHighlightColor: '#083623',

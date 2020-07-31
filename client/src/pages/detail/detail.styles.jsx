@@ -5,21 +5,23 @@ import { helpers } from 'utilities/styles/helpers.styles';
 const {secondaryColor, lightSecondaryColor, accentColor} = helpers;
 
 export const HeaderDetails = styled.div`
-  margin: 1rem 0;
+margin: 1rem 0 0 0;
+position: relative;
 
-  .title {
-    font-size: 1.8rem;
-    font-weight: bold;
+.title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 1rem 1rem 0;
   }
   .timestamp {
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-style: italic;
-    border-top: 1px solid ${secondaryColor};
-    padding: 1rem 0;
-    margin: 0.5rem 0;
+    position: absolute;
+    top: -7%;
+    right: 2%;
   }
   .img {
-    width: 25rem;
+    width: 27rem;
   }
   img {
     max-width: 100%;
@@ -34,7 +36,6 @@ export const HeaderDetails = styled.div`
   font-size: 1rem;
   height: 10vh;
   width: 100%;
-  margin: 2rem 0;
 
   .header-items {
     display: grid;
