@@ -67,7 +67,7 @@ export const HeaderContainer = styled.div`
       }
       
       .detail-2 {
-        margin: 0 2rem;
+        margin-left: 5rem;
         padding: 0 0.5rem;
         margin-top:  0rem;
 
