@@ -109,11 +109,13 @@ export default [
 	// SECTION ADMIN
 	{
 		path: '/ttcomt-admin',
+		exact: true,
 		layout: AdminLayout,
 		component: AdminPage,
 	},
 	{
 		path: '/ttcomt-admin/users',
+		exact: true,
 		layout: AdminLayout,
 		component: UserTab,
 	},
