@@ -36,15 +36,11 @@ export const Contents = styled.div`
 		height: 100%;
 		position: relative;
 	}
-	.bodywrap {
-    margin-top: 100px;
-	}
-	.center,
-	.bodywrap {
+	.center {
 		height: 100%;
 	}
 	.center {
-		margin: 7% 26% 1% 27%;
+		margin: 6% 26% 1% 27%;
 	}
 `;
 
