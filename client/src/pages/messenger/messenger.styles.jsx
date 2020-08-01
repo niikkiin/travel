@@ -6,7 +6,7 @@ export const MessengerContainer = styled.div`
 	margin-top: 6.5rem;
 	font-size: 2rem;
 	display: grid;
-	grid-template-rows: 10vh minmax(54vh, 0.6fr) 10vh;
+	grid-template-rows: 10vh minmax(54vh, 0.5fr) 10vh;
 `;
 
 export const MessagesContainer = styled.div`

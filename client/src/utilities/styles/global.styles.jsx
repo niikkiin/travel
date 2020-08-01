@@ -19,6 +19,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
+    min-height: 100vh;
     box-sizing: border-box;
     font-family: 'Muli', sans-serif;
     background-color: ${primaryColor};

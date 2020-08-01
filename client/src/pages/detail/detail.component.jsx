@@ -13,7 +13,7 @@ import {
 } from 'pages/messenger/messenger.styles';
 import { SendMessage } from 'components/send-message/send-message.component';
 import MessageHeader from 'components/message-header/message-header.component';
-import { HeaderDetails, PastedHeader } from './detail.styles';
+import { HeaderDetails, PastedHeader, MessageHeaderBubble } from './detail.styles';
 import MessageSent from 'components/message-sent/message-sent.component';
 
 const Details = ({ getPost, post: { post, loading }, match }) => {
@@ -28,19 +28,25 @@ const Details = ({ getPost, post: { post, loading }, match }) => {
 			</MessageHeaderContainer>
 			<MessagesContainer>
 				<div className='messages'>
-					<MessageSent style={{margin: '0', padding: '0'}}>
-						<HeaderDetails>
-							{post.map((p) => (
-								<>
-									<div className='timestamp'>{p.timestamp}</div>
-									<div className='title'>{p.title}</div>
-									<div className='img'>
-										<img src={p.thumbnail} alt={p.title} />
-									</div>
-								</>
-							))}
-						</HeaderDetails>
-					</MessageSent>
+					<MessageHeaderBubble>
+						<div className='with-time'>
+							<div className='time-span'>You - 7:42:19 AM</div>
+							<div className='sent'>
+								<HeaderDetails>
+									{post.map((p) => (
+										<>
+											<div className='timestamp'>{p.timestamp}</div>
+											<div className='title'>{p.title}</div>
+											<div className='img'>
+												<img src={p.thumbnail} alt={p.title} />
+											</div>
+										</>
+									))}
+								</HeaderDetails>
+							</div>
+						</div>
+						<div className='space'></div>
+					</MessageHeaderBubble>
 				</div>
 			</MessagesContainer>
 			<PastedHeader>
@@ -53,7 +59,7 @@ const Details = ({ getPost, post: { post, loading }, match }) => {
 							<div className='title'>{p.title}</div>
 							<div className='timestamp'>{p.timestamp}</div>
 						</div>
-            <div className="x-mark">&#10005;</div>
+						<div className='x-mark'>&#10005;</div>
 					</div>
 				))}
 			</PastedHeader>

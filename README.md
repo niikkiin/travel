@@ -7,6 +7,9 @@
 
 <br />
 
+    <!-- "react-dnd": "^11.1.3",
+    "react-dnd-html5-backend": "^11.1.3", -->
+
 ### Project Structure
 
 - This project is bootstrapped using [Create React App](https://github.com/facebook/create-react-app).

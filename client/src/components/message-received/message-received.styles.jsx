@@ -7,7 +7,7 @@ const { lightGreen, secondaryColor } = helpers;
 export const MessageReceivedContainer = styled.div`
 display: grid;
 grid-template-columns: repeat(2, 1fr);
-
+justify-items: start;
 margin: 1.25rem 0;
 
 .with-time {
@@ -25,7 +25,8 @@ margin: 1.25rem 0;
 
     background-color: ${lightGreen};
     border: 1px solid ${secondaryColor};
-    padding: 0.5rem 0.8rem;
+    // padding: 0.5rem 0 0 0;
+    padding: 1rem 1.5rem;
     word-break: break-word;
     border-radius: 1rem;
     font-size: 1.2rem;
