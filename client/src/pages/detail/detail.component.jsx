@@ -14,7 +14,6 @@ import {
 import { SendMessage } from 'components/send-message/send-message.component';
 import MessageHeader from 'components/message-header/message-header.component';
 import { HeaderDetails, PastedHeader, MessageHeaderBubble } from './detail.styles';
-import MessageSent from 'components/message-sent/message-sent.component';
 
 const Details = ({ getPost, post: { post, loading }, match }) => {
 	useEffect(() => {
