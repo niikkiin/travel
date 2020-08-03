@@ -9,4 +9,5 @@ export const LeftSidebarContainer = styled.div`
 	place-items: center;
 	height: 100%;
 	left: 0;
+	z-index: -9999;
 `;
