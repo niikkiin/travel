@@ -34,7 +34,7 @@ export const InfoPage = () => {
 		address: '',
 	});
 
-	const { avatar, website, phoneNumber, address, travelTags } = formData;
+	const { avatar, website, phoneNumber, address } = formData;
 
 	const handleChange = (e) => {
 		setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -50,9 +50,9 @@ export const InfoPage = () => {
 		reader.readAsDataURL(e.target.files[0]);
 	};
 
-	const handleSelectChange = (e) => {
-		console.log(e.target.value);
-	}
+	// const handleSelectChange = (e) => {
+	// 	console.log(e.target.value);
+	// }
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
