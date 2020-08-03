@@ -11,7 +11,7 @@ import profile3 from 'assets/profile3.png';
 
 import getCroppedImg from 'sections/main/cropImage';
 
-import { CreatePost } from 'components/create-post/create-post.component';
+import CreatePost from 'components/create-post/create-post.component';
 
 const ProfilePage = ({ hidden }) => {
 	const [posts, setPosts] = useState(OWN_POST_DATA);

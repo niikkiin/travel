@@ -15,7 +15,9 @@ const DefaultLayout = ({ children }) => {
 					<div className='bodywrap'>
 						<LeftSidebar />
 						<RightSidebar />
-						<div className='center'>{children}</div>
+						<div className='scroll'>
+							<div className='center'>{children}</div>
+						</div>
 					</div>
 				</div>
 			</div>

@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, Suspense } from 'react';
 
 import { MainFeedContainer } from 'pages/main-feed/main-feed.styles';
 
@@ -11,12 +11,14 @@ import profile3 from 'assets/profile3.png';
 import getCroppedImg from 'sections/main/cropImage';
 
 // components
-import Posts from 'sections/posts/posts.component';
+// import Posts from 'sections/posts/posts.component';
 import { connect } from 'react-redux';
-import { CreatePost } from 'components/create-post/create-post.component';
+import CreatePost from 'components/create-post/create-post.component';
+
+// lazy load
+const Posts = React.lazy(() => import('sections/posts/posts.component'));
 
 const MainFeed = ({ hidden }) => {
-
 	const [posts, setPosts] = useState(POST_DATA);
 
 	const [crop, setCrop] = useState({ x: 0, y: 0 });
@@ -26,7 +28,6 @@ const MainFeed = ({ hidden }) => {
 	const onCropComplete = useCallback((croppedArea, croppedAreaPixels) => {
 		setCroppedAreaPixels(croppedAreaPixels);
 	}, []);
-
 
 	const [formData, setFormData] = useState({
 		caption: '',
@@ -80,8 +81,8 @@ const MainFeed = ({ hidden }) => {
 
 	return (
 		<MainFeedContainer>
-			{hidden ? 
-					<CreatePost
+			{hidden ? (
+				<CreatePost
 					crop={crop}
 					zoom={zoom}
 					rotation={rotation}
@@ -96,9 +97,11 @@ const MainFeed = ({ hidden }) => {
 					caption={caption}
 					imageURI={imageURI}
 				/>
-			: null}
+			) : null}
 			Main Feed
-			<Posts posts={posts} />
+			<Suspense fallback={<div>Loading...</div>}>
+				<Posts posts={posts} />
+			</Suspense>
 		</MainFeedContainer>
 	);
 };

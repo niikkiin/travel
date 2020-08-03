@@ -27,16 +27,16 @@ export const Main = styled.div`
 `;
 
 export const Contents = styled.div`
-.main {
-  height: 100vh;
-  overflow-y: auto;
+.wrap {
+	width: 100%;
+	height: 100%;
+	position: relative;
 }
-	.wrap {
-		width: 100%;
-		height: 100%;
-		position: relative;
-	}
-	.center {
+.scroll {
+	overflow-y: auto;
+	height: 100vh;
+}
+.center {
 		height: 100%;
 	}
 	.center {

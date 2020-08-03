@@ -2,10 +2,10 @@ import styled from 'styled-components';
 
 import { helpers } from 'utilities/styles/helpers.styles';
 
-const { secondaryColor } = helpers;
+const { secondaryColor, accentColor } = helpers;
 
 export const CreatePostContainer = styled.div`
-	margin: 2rem 5rem;
+	margin: 2rem 1.5rem;
 	margin-top: 8rem;
 	padding: 2rem;
 	border: 1px solid ${secondaryColor};
@@ -40,4 +40,19 @@ export const CropperContainer = styled.div`
 export const ZoomContainer = styled.h3`
 	font-size: 1.3rem;
 	margin-top: 1rem;
+`;
+
+export const HeaderCreatePost = styled.div`
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	.x-mark {
+		margin-top: -1rem;
+		cursor: pointer;
+
+		&:hover {
+			color: ${accentColor};
+		}
+	}
 `;

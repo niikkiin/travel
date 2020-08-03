@@ -1,7 +1,7 @@
 import React from 'react';
 
 // styled components
-import { CreatePostContainer, CropperContainer, ZoomContainer } from 'components/create-post/create-post.styles';
+import { CreatePostContainer, CropperContainer, ZoomContainer, HeaderCreatePost } from 'components/create-post/create-post.styles';
 import { FormInput } from 'components/form-input/form-input.component';
 import { CustomButton } from 'components/custom-button/custom-button.component';
 import { UploadImageButton } from 'components/upload-image-button/upload-image-button.component';
@@ -9,8 +9,10 @@ import { UploadImageButton } from 'components/upload-image-button/upload-image-b
 // image crop
 import Cropper from 'react-easy-crop';
 import Slider from '@material-ui/core/Slider';
+import { connect } from 'react-redux';
+import { toggleCreatePost } from 'store/actions/create-post.actions';
 
-export const CreatePost = ({
+const CreatePost = ({
 	isClosed,
 	handlePostSubmit,
 	handlePostChange,
@@ -24,10 +26,14 @@ export const CreatePost = ({
 	setCrop,
 	onCropComplete,
 	setZoom,
+	toggleCreatePost
 }) => {
 	return (
 		<CreatePostContainer className={isClosed ? 'is-closed' : ''}>
-			<h3 className='title'>Create Post</h3>
+			<HeaderCreatePost>
+				<h3 className='title'>Create Post</h3>
+				<div className='x-mark' onClick={toggleCreatePost}>&#10005;</div>
+			</HeaderCreatePost>
 			<form className='form' onSubmit={(e) => handlePostSubmit(e)} noValidate>
 				<FormInput
 					name='caption'
@@ -91,3 +97,5 @@ export const CreatePost = ({
 		</CreatePostContainer>
 	);
 };
+
+export default connect(null, {toggleCreatePost})(CreatePost);

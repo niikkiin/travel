@@ -26,6 +26,66 @@ export const InfoPageContainer = styled.div`
 			}
 		}
 	}
+
+	.profile-avatar {
+		display: grid;
+		place-items: center;
+		cursor: pointer;
+		position: relative;
+		
+		input[type="file"] {
+			display: none;
+		}
+		
+		label {
+			cursor: pointer;
+			transition: all 0.5s ease;
+			
+			&:hover {
+				
+				.image--cover {
+					opacity: 0.5;
+				}
+				
+				.label-upload {
+					transform: scale(1);
+				}
+			}		
+		}
+		
+		.label-upload {
+			transition: all 0.5s ease;
+			transform: scale(0);
+			width: 11rem;
+			position: absolute;
+			bottom: 36%;
+			left: 33%;
+			height: 3rem;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			overflow: hidden;
+			font-weight: bold;
+			// color: #fff;     
+
+
+			.icon {
+				font-size: 1.8rem;
+				// margin-right: 0.5rem;
+			}
+		}
+
+		.image--cover {
+			width: 10rem;
+			height: 10rem;
+			border-radius: 50%;
+		
+			object-fit: cover;
+			object-position: center right;
+			transition: all 0.5s ease;
+		}
+	}
 `;
 
 export const SkipButton = styled(Link)`

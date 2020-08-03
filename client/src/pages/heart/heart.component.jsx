@@ -12,7 +12,7 @@ import getCroppedImg from 'sections/main/cropImage';
 
 // components
 import { connect } from 'react-redux';
-import { CreatePost } from 'components/create-post/create-post.component';
+import CreatePost from 'components/create-post/create-post.component';
 
 const Likes = ({ hidden }) => {
 
