@@ -2,6 +2,7 @@ import React from 'react';
 
 // styled components
 import { MessageReceivedContainer } from 'components/message-received/message-received.styles';
+
 const MessageReceived = ({ children }) => {
 	return (
 		<MessageReceivedContainer>

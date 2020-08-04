@@ -1,40 +1,29 @@
 import React from 'react';
 
 // styled components
-import { AccountContainer, MainContainer } from 'layouts/layout.styles';
+import { SiteLayoutContainer, AccountContainer } from 'layouts/layout.styles';
+import Header from 'components/header/header.component';
+import { SideProfile } from 'components/side-profile/side-profile.component';
 
 // components
-import { SideProfile } from 'components/side-profile/side-profile.component';
-import Header from 'sections/header/header.component';
 
 const AccountLayout = ({ children }) => {
 	return (
-		// <>
-		// 	<Header />
-		// 	<AccountContainer>
-		// 		<div className='account-box'>
-		// 			<div className='side-profile'>
-		// 				<SideProfile />
-		// 			</div>
-		// 			<div className='profile-contents'>
-		// 				{children}
-		// 			</div>
-		// 		</div>
-		// 	</AccountContainer>
-		// </>
-		<MainContainer>
+		<SiteLayoutContainer>
 			<Header />
-			<div id='content'>
-				<AccountContainer>
-					<div className='account-box'>
-						<div className='side-profile'>
-							<SideProfile />
+			<div className='scroll-main'>
+				{/* <main className='center'> */}
+					<AccountContainer>
+						<div className='account-box'>
+							<div className='side-profile'>
+								<SideProfile />
+							</div>
+							<div className='profile-contents'>{children}</div>
 						</div>
-						<div className='profile-contents'>{children}</div>
-					</div>
-				</AccountContainer>
+					</AccountContainer>
+				{/* </main> */}
 			</div>
-		</MainContainer>
+		</SiteLayoutContainer>
 	);
 };
 

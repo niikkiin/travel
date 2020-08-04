@@ -19,11 +19,17 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    min-height: 100vh;
+    // overflow-y: hidden;
+    // min-height: 100vh;
     box-sizing: border-box;
     font-family: 'Muli', sans-serif;
     background-color: ${primaryColor};
     color: ${textColor1};
+  }
+
+  html,
+  body {
+    height: 100%;
   }
 
   img {

@@ -17,7 +17,6 @@ export const UploadImageContainer = styled.div`
     padding: 8px 20px;
     font-size: 1.3rem;
     cursor: pointer;
-
     .icon {
       margin-right: 0.5rem;
     }
@@ -30,11 +29,9 @@ export const UploadImageContainer = styled.div`
     top: 0;
     opacity: 0;
   }
-
   .image-holder {
     margin-top: 1rem;
   }
-
   .img-holder {
     width: auto;
     height: 14.2rem;

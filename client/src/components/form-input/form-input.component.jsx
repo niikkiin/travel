@@ -1,7 +1,14 @@
 import React from 'react';
 
 // styled components
-import { FormInputContainer, Input, Label } from 'components/form-input/form-input.styles';
+import {
+	FormInputContainer,
+	Input,
+	Label,
+	AccountFormInputContainer,
+	AccountLabel,
+	AccountInput,
+} from 'components/form-input/form-input.styles';
 
 export const FormInput = ({ handleChange, label, ...props }) => (
 	<FormInputContainer>
@@ -13,4 +20,13 @@ export const FormInput = ({ handleChange, label, ...props }) => (
 			</Label>
 		) : null}
 	</FormInputContainer>
+);
+
+export const AccountFormInput = ({ handleChange, label, ...props }) => (
+	<AccountFormInputContainer>
+		<AccountLabel className='label' htmlFor={label}>
+			{label}
+		</AccountLabel>
+		<AccountInput autoComplete='off' onChange={handleChange} {...props} />
+	</AccountFormInputContainer>
 );

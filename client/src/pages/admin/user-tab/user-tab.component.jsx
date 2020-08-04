@@ -191,10 +191,10 @@ const UserTab = () => {
 				highlight={true}
 				striped={true}
 				fixedHeader={false}
-        fixedHeaderScrollHeight="auto"
-        subHeader={true}
-        pagination={true}
-        handleChange={(e, value) => this.handleSearchChange(e, value)}
+				fixedHeaderScrollHeight='auto'
+				subHeader={true}
+				pagination={true}
+				handleChange={(e, value) => this.handleSearchChange(e, value)}
 			/>
 		</UserTabContainer>
 	);

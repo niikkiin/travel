@@ -3,9 +3,12 @@ import React from 'react';
 // styled components
 import { PostItemContainer } from 'components/post-item/post-item.styles';
 import { withRouter } from 'react-router-dom';
+import Img from 'react-cool-img';
 
-const PostItem = ({posts, history}) => {
+// loading
+// import LoadingSVG from 'assets/loading.svg';
 
+const PostItem = ({ posts, history }) => {
 	return (
 		<>
 			{posts.map((post) => {
@@ -24,7 +27,14 @@ const PostItem = ({posts, history}) => {
 							<div className='card-body'>
 								<p className='post-title'>{title}</p>
 							</div>
-							<img src={thumbnail} alt={title} className='card-img' />
+							<Img
+								className='card-img'
+								// placeholder={LoadingSVG}
+                src={thumbnail}
+                cache={true}
+								// error={errorImage}
+								alt={title}
+							/>
 						</div>
 					</PostItemContainer>
 				);
@@ -32,5 +42,4 @@ const PostItem = ({posts, history}) => {
 		</>
 	);
 };
-
 export default withRouter(PostItem);

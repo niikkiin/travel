@@ -10,11 +10,9 @@ export const ProfilePreviewContainer = styled(Link)`
   text-decoration: none;
   color: ${textColor1};
   transition: all 0.5s ease;
-
   &:hover {
     color: ${accentColor};
   }
-
 	.avatar {
 		width: 3.5rem;
 		height: 3.5rem;
@@ -29,7 +27,6 @@ export const ProfilePreviewContainer = styled(Link)`
 		background-position: center center;
 		margin: 0 2rem;
 	}
-
 	.name {
 		font-weight: bold;
 		font-size: 1.8rem;
@@ -37,7 +34,6 @@ export const ProfilePreviewContainer = styled(Link)`
 `;
 
 export const IconContainer = styled.div`
-
 	.icon {
 		font-size: 2.4rem;
 		display: flex;

@@ -12,7 +12,6 @@ export const ShowHideContainerWrapper = styled.div`
   // transition-property: all;
 	// transition-duration: 1s;
 	// transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
-
 	&.do-show {
 		height: 100%;
 		border: 1px solid ${secondaryColor};

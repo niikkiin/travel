@@ -1,14 +1,14 @@
 // images
-import profile1 from 'assets/profile1.jpg';
-import profile2 from 'assets/profile2.png';
-import profile3 from 'assets/profile3.png';
-import profile4 from 'assets/profile4.jpg';
-import profile5 from 'assets/profile5.jpg';
-import post1 from 'assets/post1.png';
-import post2 from 'assets/post2.png';
-import post3 from 'assets/post3.jpg';
-import post4 from 'assets/post4.jpg';
-import post5 from 'assets/post5.jpg';
+import profile1 from 'assets/profile1.webp';
+import profile2 from 'assets/profile2.webp';
+import profile3 from 'assets/profile3.webp';
+// import profile4 from 'assets/profile4.webp';
+import profile5 from 'assets/profile5.webp';
+import post1 from 'assets/post1.webp';
+import post2 from 'assets/post2.webp';
+import post3 from 'assets/post3.webp';
+import post4 from 'assets/post4.webp';
+import post5 from 'assets/post5.webp';
 
 export const POST_DATA = [
 	{
@@ -31,8 +31,8 @@ export const POST_DATA = [
 	},
 	{
 		id: 4,
-		postedBy: 'Tammy Barns',
-		avatar: profile4,
+		postedBy: 'Mary Carrington',
+		avatar: profile3,
 		location: "Jack's flight club",
 		time: '10m ago',
 		title: 'New tourist destination now with 10% discount',

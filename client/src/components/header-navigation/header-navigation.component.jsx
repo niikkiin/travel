@@ -11,11 +11,11 @@ import { Icon } from '@iconify/react';
 import homeIcon from '@iconify/icons-foundation/home';
 import locationArrow from '@iconify/icons-uil/location-arrow';
 import compass2Icon from '@iconify/icons-icomoon-free/compass2';
-import heartIcon from '@iconify/icons-bytesize/heart';
+import heartOutlined from '@iconify/icons-ant-design/heart-outlined';
 import plusCircleOutlined from '@iconify/icons-ant-design/plus-circle-outlined';
 
 // redux
-import { toggleCreatePost } from 'store/actions/create-post.actions';
+import { toggleCreatePost } from 'store/actions/create-post.action';
 import { connect } from 'react-redux';
 
 const HeaderNavigation = ({ toggleCreatePost }) => {
@@ -33,8 +33,12 @@ const HeaderNavigation = ({ toggleCreatePost }) => {
 				// className={`icon ${isNavItemActive ? 'nav-active' : ''}`}
 				onClick={toggleCreatePost}
 			/>
-			<NavLink activeClassName='is-active' exact to='/profile'><Icon icon={compass2Icon} className='icon' /></NavLink>
-			<NavLink activeClassName='is-active' exact to='/likes'><Icon icon={heartIcon} className='icon' /></NavLink>
+			<NavLink activeClassName='is-active' exact to='/profile'>
+				<Icon icon={compass2Icon} className='icon' />
+			</NavLink>
+			<NavLink activeClassName='is-active' exact to='/likes'>
+				<Icon icon={heartOutlined} className='icon' />
+			</NavLink>
 		</HeaderNavigationContainer>
 	);
 };

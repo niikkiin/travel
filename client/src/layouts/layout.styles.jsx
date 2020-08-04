@@ -4,43 +4,17 @@ import { helpers } from 'utilities/styles/helpers.styles';
 
 const { secondaryColor } = helpers;
 
-export const MainContainer = styled.div`
-	#content {
-		height: 100vh;
+export const SiteLayoutContainer = styled.div`
+	.scroll-main {
+		height: 92vh;
 		overflow-y: scroll;
 	}
-`;
-
-export const Main = styled.div`
-	display: grid;
-	// grid-template: auto 1fr / minmax(40rem, 1fr) minmax(70rem, 1fr) minmax(40rem, 1fr);
-	// grid-template: auto 1fr / minmax(8%, 25%) minmax(60%, 50%) minmax(8%, 25%);
-	grid-template: 1fr auto / minmax(8%, 1fr) minmax(50%, 1fr) minmax(8%, 1fr);
-	min-height: 100vh;
-
-	.main-content {
-		grid-column: 2/3;
-		// background-color: pink;
-		// margin: 8rem 3rem 3rem 3rem;
-		display: block;
-	}
-`;
-
-export const Contents = styled.div`
-.wrap {
-	width: 100%;
-	height: 100%;
-	position: relative;
-}
-.scroll {
-	overflow-y: auto;
-	height: 100vh;
-}
-.center {
+	.center,
+	.bodywrap {
 		height: 100%;
 	}
 	.center {
-		margin: 5% 26% 1% 26%;
+		margin: 2vh 27.5%;
 	}
 `;
 
@@ -48,27 +22,22 @@ export const RegistrationContainer = styled.div`
 	display: grid;
 	place-items: center;
 	height: 100vh;
-
 	.registration-box {
 		padding: 4rem;
 		width: 40rem;
-		// height: 40rem;
 		border: 1px solid ${secondaryColor};
 	}
 `;
+
 export const AccountContainer = styled.div`
 	display: grid;
 	place-items: center;
 	min-height: 90vh;
-	margin-top: 6rem;
-
 	.account-box {
 		width: 80rem;
 		border: 1px solid ${secondaryColor};
-
 		display: grid;
 		grid-template-columns: minmax(150px, 25%) 1fr;
-
 		.side-profile {
 		}
 		.profile-contents {
@@ -82,34 +51,27 @@ export const MainAdminContainer = styled.div`
 	ul {
 		list-style: none;
 	}
-
 	a,
 	button {
 		color: inherit;
 	}
-
 	a {
 		text-decoration: none;
 	}
-
 	button {
 		background: none;
 		cursor: pointer;
 	}
-
 	input {
 		-webkit-appearance: none;
 	}
-
 	button,
 	input {
 		border: none;
 	}
-
 	svg {
 		display: block;
 	}
-
 	/* PAGE CONTENT STYLES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 	.page-content {
@@ -121,7 +83,6 @@ export const MainAdminContainer = styled.div`
 		color: #171616;
 		background: #f0f1f6;
 	}
-
 	.search-and-user {
 		display: grid;
 		grid-template-columns: 1fr auto;
@@ -130,11 +91,9 @@ export const MainAdminContainer = styled.div`
 		background: #f0f1f6;
 		margin-bottom: 30px;
 	}
-
 	.search-and-user form {
 		position: relative;
 	}
-
 	.search-and-user input[type='search'] {
 		width: 100%;
 		height: 50px;
@@ -145,42 +104,34 @@ export const MainAdminContainer = styled.div`
 		border-radius: 4px;
 		box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.075);
 	}
-
 	.search-and-user ::placeholder {
 		color: #171616;
 	}
-
 	.search-and-user form svg {
 		width: 26px;
 		height: 26px;
 		fill: #171616;
 	}
-
 	.search-and-user form button {
 		position: absolute;
 		top: 50%;
 		right: 15px;
 		transform: translateY(-50%);
 	}
-
 	.search-and-user .admin-profile {
 		display: flex;
 		align-items: center;
 	}
-
 	.search-and-user .admin-profile .greeting {
 		margin: 0 10px 0 20px;
 	}
-
 	.search-and-user .admin-profile svg {
 		width: 30px;
 		height: 30px;
 	}
-
 	.search-and-user .admin-profile .notifications {
 		position: relative;
 	}
-
 	.search-and-user .admin-profile .badge {
 		display: flex;
 		align-items: center;
@@ -195,13 +146,11 @@ export const MainAdminContainer = styled.div`
 		color: #fff;
 		background: #ec1848;
 	}
-
 	.page-content .grid {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		grid-gap: 30px;
 	}
-
 	.page-content .grid > article {
 		display: flex;
 		height: 300px;
@@ -209,12 +158,10 @@ export const MainAdminContainer = styled.div`
 		border-radius: 4px;
 		box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.075);
 	}
-
 	.page-content .grid > article:first-child,
 	.page-content .grid > article:last-child {
 		grid-column: 1 / -1;
 	}
-
 	/* MQ RULES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 	@media screen and (max-width: 767px) {
@@ -223,24 +170,19 @@ export const MainAdminContainer = styled.div`
 			position: static;
 			width: 100%;
 		}
-
 		.page-header {
 			padding: 10px;
 		}
-
 		.page-header nav {
 			flex-direction: row;
 		}
-
 		.page-header .logo {
 			margin: 0;
 			height: 35px;
 		}
-
 		.page-header .toggle-mob-menu {
 			display: block;
 		}
-
 		.page-header .admin-menu {
 			position: absolute;
 			left: 98px;
@@ -254,25 +196,20 @@ export const MainAdminContainer = styled.div`
 			transform: scale(0.95);
 			transition: all 0.2s;
 		}
-
 		.page-header .admin-menu li:nth-last-child(2) {
 			margin-bottom: 12px;
 		}
-
 		.page-header .admin-menu li:last-child,
 		.search-and-user .admin-profile .greeting {
 			display: none;
 		}
-
 		.page-content {
 			min-height: 0;
 			padding: 10px;
 		}
-
 		.page-content .grid {
 			grid-gap: 10px;
 		}
-
 		.search-and-user {
 			position: absolute;
 			left: 131px;
@@ -283,69 +220,56 @@ export const MainAdminContainer = styled.div`
 			border-radius: 4px;
 			background: transparent;
 		}
-
 		.search-and-user input[type='search'] {
 			font-size: 1rem;
 			height: 35px;
 		}
-
 		.search-and-user form svg {
 			width: 18px;
 			height: 18px;
 		}
-
 		.search-and-user .admin-profile svg {
 			fill: #fff;
 		}
 	}
-
 	@media screen and (max-width: 400px) {
 		.page-content .grid > article {
 			grid-column: 1 / -1;
 		}
 	}
-
 	/* BODY CLASSES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 	.mob-menu-opened .toggle-mob-menu svg {
 		transform: rotate(180deg);
 	}
-
 	.mob-menu-opened .page-header .admin-menu {
 		transform: scale(1);
 		visibility: visible;
 		opacity: 1;
 	}
-
 	@media screen and (min-width: 768px) {
 		.collapsed .page-header {
 			width: 40px;
 		}
-
 		.collapsed .page-header .admin-menu li > * {
 			padding: 10px;
 		}
-
 		.collapsed .page-header .logo,
 		.collapsed .page-header .admin-menu span,
 		.collapsed .page-header .admin-menu .menu-heading {
 			display: none;
 		}
-
 		.collapsed .page-header .admin-menu svg {
 			margin-right: 0;
 		}
-
 		.collapsed .page-header .collapse-btn svg {
 			transform: rotate(180deg);
 		}
-
 		.collapsed .page-content {
 			left: 40px;
 			width: calc(100% - 40px);
 		}
 	}
-
 	/* FOOTER
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 	.page-footer {
@@ -353,7 +277,6 @@ export const MainAdminContainer = styled.div`
 		text-align: right;
 		margin-top: 10px;
 	}
-
 	.page-footer span {
 		color: #ec1848;
 	}

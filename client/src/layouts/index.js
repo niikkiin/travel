@@ -1,7 +1,12 @@
-import DefaultLayout from "layouts/default.layout";
-import ProfileLayout from 'layouts/profile.layout';
+// layouts
+import SiteLayout from 'layouts/site.layout';
+import AdminLayout from 'layouts/admin.layout';
+import RegistrationLayout from 'layouts/registration.layout';
+import AccountLayout from 'layouts/account.layout';
 
 export { 
-  DefaultLayout,
-  ProfileLayout
+  SiteLayout,
+  AdminLayout,
+  RegistrationLayout,
+  AccountLayout
 };

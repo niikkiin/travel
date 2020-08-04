@@ -1,117 +1,89 @@
 // Layouts
-import RegistrationLayout from 'layouts/registration.layout';
-import AdminLayout from 'layouts/admin.layout';
-import { DefaultLayout } from 'layouts';
-import AccountLayout from 'layouts/account.layout';
+import { SiteLayout, RegistrationLayout, AdminLayout, AccountLayout } from 'layouts';
 
-// Comopnents
-import ProfilePage from 'pages/profile/profile.component';
-import MainFeed from 'pages/main-feed/main-feed.component';
-import Likes from 'pages/heart/heart.component';
-import { SignUpPage } from 'pages/sign-up/sign-up.component';
-import { SignInPage } from 'pages/sign-in/sign-in.component';
-import { InfoPage } from 'pages/info/info.component';
-import BusinessProfileAccount from 'pages/business-profile-account/edit-profile.component';
-import { ChangePassword } from 'pages/business-profile-account/change-password.component';
-import { EmailAndSms } from 'pages/business-profile-account/email-and-sms.component';
-import { PushNotification } from 'pages/business-profile-account/push-notification.component';
-import { ManageContacts } from 'pages/business-profile-account/manage-contacts.component';
-import { PrivacyAndSecurity } from 'pages/business-profile-account/privacy-and-security.component';
-import { LoginActivity } from 'pages/business-profile-account/login-activity.component';
-import Messenger from 'pages/messenger/messenger.component';
-import Details from 'pages/detail/detail.component';
-
-// admin
-import AdminPage from 'pages/admin/admin.component';
+// Components
+import MainFeed from 'pages/site/main-feed/main-feed.component';
+import MessagingPage from 'pages/site/messaging/messaging.component';
+import ProfilePage from 'pages/site/profile/profile.component';
+import LikesPage from 'pages/site/likes/likes.component';
+import DetailMessage from 'pages/site/detail-message/detail-message.component';
+import { SignInPage } from 'pages/site/sign-in/sign-in.component';
+import { SignUpPage } from 'pages/site/sign-up/sign-up.component';
+import { InfoPage } from 'pages/site/info/info.component';
+import EditProfilePage from 'pages/site/edit-profile/edit-profile.component';
+import { ChangePassword } from 'pages/site/change-password/change-password.component';
+import DashboardPage from 'pages/admin/dashboard/dashboard.component';
 import UserTab from 'pages/admin/user-tab/user-tab.component';
 
 export default [
 	{
 		path: '/',
 		exact: true,
-		layout: DefaultLayout,
+		layout: SiteLayout,
 		component: MainFeed,
-	},
-	{
-		path: '/likes',
-		exact: true,
-		layout: DefaultLayout,
-		component: Likes,
 	},
 	{
 		path: '/messages',
 		exact: true,
-		layout: DefaultLayout,
-		component: Messenger,
+		layout: SiteLayout,
+		component: MessagingPage,
+	},
+	{
+		path: '/profile',
+		exact: true,
+		layout: SiteLayout,
+		component: ProfilePage,
+	},
+	{
+		path: '/likes',
+		exact: true,
+		layout: SiteLayout,
+		component: LikesPage,
 	},
 	{
 		path: '/details/:id',
 		exact: true,
-		layout: DefaultLayout,
-		component: Details,
+		layout: SiteLayout,
+		component: DetailMessage,
 	},
-	{
-		path: '/profile',
-		layout: DefaultLayout,
-		component: ProfilePage,
-	},
-	{
-		path: '/register',
-		layout: RegistrationLayout,
-		component: SignUpPage,
-	},
+	// SECTION REGISTRATION
 	{
 		path: '/login',
+		exact: true,
 		layout: RegistrationLayout,
 		component: SignInPage,
 	},
 	{
+		path: '/register',
+		exact: true,
+		layout: RegistrationLayout,
+		component: SignUpPage,
+	},
+	{
 		path: '/info',
+		exact: true,
 		layout: RegistrationLayout,
 		component: InfoPage,
 	},
-	// ACCOUNTS BUSINESS
+	// SECTION ACCOUNT
 	{
 		path: '/account-update',
+		exact: true,
 		layout: AccountLayout,
-		component: BusinessProfileAccount,
+		component: EditProfilePage,
 	},
 	{
 		path: '/change-password',
+		exact: true,
 		layout: AccountLayout,
 		component: ChangePassword,
-	},
-	{
-		path: '/email',
-		layout: AccountLayout,
-		component: EmailAndSms,
-	},
-	{
-		path: '/notifications',
-		layout: AccountLayout,
-		component: PushNotification,
-	},
-	{
-		path: '/manage-contacts',
-		layout: AccountLayout,
-		component: ManageContacts,
-	},
-	{
-		path: '/privacy',
-		layout: AccountLayout,
-		component: PrivacyAndSecurity,
-	},
-	{
-		path: '/login-activity',
-		layout: AccountLayout,
-		component: LoginActivity,
 	},
 	// SECTION ADMIN
 	{
 		path: '/ttcomt-admin',
 		exact: true,
 		layout: AdminLayout,
-		component: AdminPage,
+		component: DashboardPage,
 	},
 	{
 		path: '/ttcomt-admin/users',

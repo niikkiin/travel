@@ -43,3 +43,34 @@ export const Label = styled.label`
 		${shrinkLabelStyles};
 	}
 `;
+
+export const AccountFormInputContainer = styled.div`
+	display: flex;
+	font-size: 1.2rem;
+`;
+
+export const AccountInput = styled.input`
+	padding: 0.5rem 1rem;
+  margin: 0.5rem;
+	width: 100%;
+	outline: none;
+	transition: all 0.5s ease;
+  border: 1px solid ${secondaryColor};
+  color: ${textColor1};
+  
+	&:focus,
+	&:active {
+    border: 1px solid ${accentColor};
+    
+    .label {
+      color: ${accentColor};
+    }
+	}
+  `;
+  
+  export const AccountLabel = styled.label`
+	padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  min-width: 15rem;
+  text-align: right;
+`;

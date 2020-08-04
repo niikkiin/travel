@@ -4,7 +4,7 @@ import React from 'react';
 import { MainAdminContainer } from 'layouts/layout.styles';
 
 // components
-import AdminHeader from 'components/admin/admin-header/admin-header.component';
+import AdminHeader from 'components/admin-header/admin-header.component';
 
 
 

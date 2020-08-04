@@ -8,11 +8,14 @@ import { UploadImageButton } from 'components/upload-image-button/upload-image-b
 import Cropper from 'react-easy-crop';
 import Slider from '@material-ui/core/Slider';
 import { CustomButton } from 'components/custom-button/custom-button.component';
-import getCroppedImg from 'sections/main/cropImage';
+
 
 // redux
 import { toggleChangeProfilePicture } from 'store/actions/change-profile-image.actions';
 import { connect } from 'react-redux';
+
+// utility
+import getCroppedImg from 'utilities/crop-image/crop-image.utility';
 
 const ChangeProfile = ({ setAvatar, avatar, setFormData, formData, toggleChangeProfilePicture }) => {
 	const [crop, setCrop] = useState({ x: 0, y: 0 });

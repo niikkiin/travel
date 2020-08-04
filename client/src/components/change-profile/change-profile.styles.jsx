@@ -6,7 +6,6 @@ import styled from 'styled-components';
 
 export const ChangeProfilePictureContainer = styled.div`
 	margin: 2rem;
-
 	.crop-container {
 		width: 100%;
 		height: 20rem;

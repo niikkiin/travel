@@ -5,7 +5,6 @@ import { helpers } from 'utilities/styles/helpers.styles';
 const { accentColor, textColor1 } = helpers;
 
 export const SideProfileContainer = styled.ul`
-
   .side-profile-list {
     display: flex;
     flex-direction: column;
@@ -14,14 +13,11 @@ export const SideProfileContainer = styled.ul`
     cursor: pointer;
     text-decoration: none;
     color: ${textColor1};
-
-
     &.active {
       border-left: 2px solid black;
       color: black;
       font-weight: 700;
     }
-
     &:hover {
       color: ${accentColor};
     }

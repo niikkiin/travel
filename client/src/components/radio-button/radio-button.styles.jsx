@@ -21,7 +21,6 @@ export const RadioButtonContainer = styled.label`
 			}
 		}
 	}
-
 	.box {
 		width: 15rem;
 		height: 5rem;

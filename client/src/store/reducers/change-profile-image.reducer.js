@@ -1,18 +1,18 @@
-const { TOGGLE_CHANGE_PROFILE_PICTURE } = require("store/actions/actions.types");
+import { TOGGLE_CHANGE_PROFILE_PICTURE } from 'store/actions/types.action';
 
 const INITIAL_STATE = {
-  hidden: false
-}
+	hidden: false,
+};
 
-export const toggleProfileChangeReducer = (state= INITIAL_STATE, action) => {
-  const { type } = action;
-  switch(type) {
-    case TOGGLE_CHANGE_PROFILE_PICTURE:
-      return {
-        ...state,
-        hidden: !state.hidden
-      }
-    default:
-      return state;   
-  }
-}
+export const toggleProfileChangeReducer = (state = INITIAL_STATE, action) => {
+	const { type } = action;
+	switch (type) {
+		case TOGGLE_CHANGE_PROFILE_PICTURE:
+			return {
+				...state,
+				hidden: !state.hidden,
+			};
+		default:
+			return state;
+	}
+};

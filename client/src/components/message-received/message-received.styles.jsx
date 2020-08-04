@@ -9,11 +9,9 @@ display: grid;
 grid-template-columns: repeat(2, 1fr);
 justify-items: start;
 margin: 1.25rem 0;
-
 .with-time {
   display: flex;
   flex-direction: column;
-
   .time-span {
     font-size: 0.8rem;
     font-style: italic;
@@ -22,7 +20,6 @@ margin: 1.25rem 0;
   }
   .receive {
     display: inline-block;
-
     background-color: ${lightGreen};
     border: 1px solid ${secondaryColor};
     // padding: 0.5rem 0 0 0;
@@ -33,7 +30,6 @@ margin: 1.25rem 0;
     font-weight: 500;
   }
 }
-
 .space {
   width: 100%;
   // min-width: 27rem;

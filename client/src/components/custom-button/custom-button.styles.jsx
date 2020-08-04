@@ -18,12 +18,10 @@ export const CustomButtonContainer = styled.button`
 	color: #fff;
 	border: 1px solid ${accentColor};
 	background-color: transparent;
-
 	&:hover {
 		color: ${accentColor};
 		border: 1px solid ${accentColor};
 	}
-
 	&.submit-btn {
 		color: #fff;
 		background-color: ${accentColor};
@@ -34,7 +32,6 @@ export const CustomButtonContainer = styled.button`
 	}
 	&:disabled {
 		cursor: not-allowed;
-
 		color: ${textColor1};
     background-color: ${secondaryColor};
     border: 1px solid ${secondaryColor};

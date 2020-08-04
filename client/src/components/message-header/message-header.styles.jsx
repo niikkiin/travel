@@ -22,7 +22,6 @@ margin-left: 2rem;
   position: absolute;
   top: -2.4%;
   left: -4.4%;
-
   &::before {
     content: '';
     padding: 0.5rem;
@@ -46,20 +45,16 @@ export const HeaderContainer = styled.div`
   .name-details {
     display: flex;
     flex-direction: column;
-
     .tags {
       font-size: 1.1rem;
       margin-top: 0.6rem;
-
       span {
         margin-right: 1rem;
         font-weight: bold;
       }
     }
-
     .main-info {
       display: flex;
-
       .detail-1,
       .detail-2 {
         font-size: 1.1rem;
@@ -70,7 +65,6 @@ export const HeaderContainer = styled.div`
         margin-left: 5rem;
         padding: 0 0.5rem;
         margin-top:  0rem;
-
         .location {
           font-size: 1.4rem;
         }
