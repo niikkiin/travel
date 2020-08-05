@@ -6,8 +6,8 @@ const { secondaryColor } = helpers;
 
 export const SiteLayoutContainer = styled.div`
 	.scroll-main {
-		height: 92vh;
-		overflow-y: scroll;
+		// height: 92vh;
+		// overflow-y: scroll;
 	}
 	.center,
 	.bodywrap {

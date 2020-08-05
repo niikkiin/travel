@@ -19,7 +19,12 @@ export const HeaderContainer = styled.header`
   z-index: 9999;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+	justify-content: space-between;
+	
+	position: fixed;
+	top: 0;
+	left: 0;
+
 
 	.logo {
 		padding: 1.3rem;

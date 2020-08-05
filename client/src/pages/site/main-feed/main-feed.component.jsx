@@ -1,4 +1,4 @@
-import React, { useState, useCallback, Suspense } from 'react';
+import React, { useState, useCallback } from 'react';
 
 import { MainFeedContainer } from 'pages/site/main-feed/main-feed.styles';
 
@@ -14,9 +14,10 @@ import getCroppedImg from 'utilities/crop-image/crop-image.utility';
 // components
 import { connect } from 'react-redux';
 import CreatePost from 'components/create-post/create-post.component';
+import Posts from 'components/posts/posts.component';
 
-// lazy load
-const Posts = React.lazy(() => import('components/posts/posts.component'));
+
+// const PostItem = React.lazy(() => import('components/post-item/post-item.component'));
 
 const MainFeed = ({ hidden }) => {
 	const [posts, setPosts] = useState(POST_DATA);
@@ -99,9 +100,7 @@ const MainFeed = ({ hidden }) => {
 				/>
 			) : null}
 			Main Feed
-			<Suspense fallback={<div>Loading...</div>}>
-				<Posts posts={posts} />
-			</Suspense>
+			<Posts posts={posts} />
 		</MainFeedContainer>
 	);
 };
