@@ -15,9 +15,9 @@ const SiteLayout = ({ children }) => {
 			<div className='scroll-main'>
 				<LeftSidebar />
 				<RightSidebar />
-				<main className='center'>
+				<div className='center'>
 				{children}
-				</main>
+				</div>
 			</div>
 		</SiteLayoutContainer>
 	);

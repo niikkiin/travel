@@ -7,6 +7,9 @@ export const HeaderNavigationContainer = styled.div`
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
+	flex: 0.8;
+	margin-left: 5rem;
+
 	.is-active {
 		.icon {
 			color: ${accentColor};

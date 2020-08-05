@@ -19,7 +19,11 @@ export const SiteLayoutContainer = styled.div`
 `;
 
 export const RegistrationContainer = styled.div`
+	display: -ms-flexbox;
 	display: grid;
+	-ms-flex-pack: center;
+	align-items: center;
+
 	place-items: center;
 	height: 100vh;
 	.registration-box {
@@ -30,13 +34,20 @@ export const RegistrationContainer = styled.div`
 `;
 
 export const AccountContainer = styled.div`
+	display: -ms-flexbox;
 	display: grid;
+	-ms-flex-pack: center;
+	align-items: center;
+	
 	place-items: center;
 	min-height: 90vh;
+
 	.account-box {
 		width: 80rem;
 		border: 1px solid ${secondaryColor};
+		display: -ms-flexbox;
 		display: grid;
+		margin-top: 2rem;
 		grid-template-columns: minmax(150px, 25%) 1fr;
 		.side-profile {
 		}

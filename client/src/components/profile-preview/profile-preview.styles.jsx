@@ -5,6 +5,7 @@ import { helpers } from 'utilities/styles/helpers.styles';
 
 const { textColor1, accentColor } = helpers; 
 export const ProfilePreviewContainer = styled(Link)`
+margin-right: 5rem;
 	display: flex;
 	align-items: center;
   text-decoration: none;
