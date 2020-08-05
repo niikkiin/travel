@@ -9,6 +9,14 @@ export const PostItemContainer = styled.div`
 	position: relative;
 	margin: 5rem 0;
 	cursor: pointer;
+
+.post-avatar {
+	width: 5.6rem;
+	height: 5.6rem;
+	border-radius: 50%;
+
+}
+
 	.avatar {
 		width: 5.6rem;
 		height: 5.6rem;
@@ -68,6 +76,9 @@ export const PostItemContainer = styled.div`
 			font-size: 2.5rem;
 			margin: 2rem 2rem 1.5rem 9rem;
 		}
+	}
+	.card span.lazy-load-image-background {
+		display: block !important;
 	}
 	.card img.card-img {
 		height: 100%;
