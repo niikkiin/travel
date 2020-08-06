@@ -1,9 +1,12 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { helpers } from 'utilities/styles/helpers.styles';
+import { helpers, breakpoints } from 'utilities/styles/helpers.styles';
 
 
 const { textColor1, accentColor } = helpers; 
+
+const {  phone } = breakpoints;
+
 export const ProfilePreviewContainer = styled(Link)`
 margin-right: 5rem;
 	display: flex;
@@ -31,6 +34,10 @@ margin-right: 5rem;
 	.name {
 		font-weight: bold;
 		font-size: 1.8rem;
+	}
+
+	@media ${phone} {
+		display: none;
 	}
 `;
 

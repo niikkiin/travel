@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 
-import { helpers } from 'utilities/styles/helpers.styles';
+import { helpers, breakpoints } from 'utilities/styles/helpers.styles';
 
 const { lightSecondaryColor, secondaryColor } = helpers;
+const { phone } = breakpoints;
 
 export const MessageHeaderWrapper = styled.div`
 position: relative;
@@ -29,6 +30,13 @@ margin-left: 2rem;
     top: -5%;
     left: -5%;
     border-radius: 50%;
+  }
+
+  @media ${phone} {
+    .avatar {
+      width: 10rem;
+      height: 10rem;
+    }
   }
 `;
 

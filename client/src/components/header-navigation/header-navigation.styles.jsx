@@ -1,7 +1,10 @@
 import styled from 'styled-components';
 
-import { helpers } from 'utilities/styles/helpers.styles';
+import { helpers, breakpoints } from 'utilities/styles/helpers.styles';
 const { textColor1, accentColor } = helpers;
+
+
+const {  phone } = breakpoints;
 
 export const HeaderNavigationContainer = styled.div`
 	display: flex;
@@ -27,5 +30,9 @@ export const HeaderNavigationContainer = styled.div`
 		&:hover {
 			color: ${accentColor};
 		}
+	}
+
+	@media ${phone} {
+		margin-left: 0;
 	}
 `;

@@ -100,7 +100,7 @@ const ProfilePage = ({ hidden }) => {
 					imageURI={imageURI}
 				/>
 			) : null}
-			Profile Page
+			<div className='title'>Profile Page</div>
 			<Posts posts={posts} />
 		</ProfilePageContainer>
 	);

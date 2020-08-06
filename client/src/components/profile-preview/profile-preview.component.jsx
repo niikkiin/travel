@@ -12,7 +12,7 @@ import bxCog from '@iconify/icons-bx/bx-cog';
 
 export const ProfilePreview = () => {
 	return (
-		<ProfilePreviewContainer to='/account-update'>
+		<ProfilePreviewContainer className='is-phone-hidden' to='/account-update'>
 			<div className='avatar' style={{ backgroundImage: 'url(' + profile3 + ')' }}></div>
 			<div className='name'>Sam Rose</div>
 			<IconContainer>

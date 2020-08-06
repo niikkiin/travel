@@ -13,8 +13,8 @@ const SiteLayout = ({ children }) => {
 		<SiteLayoutContainer>
 			<Header />
 			<div className='scroll-main'>
-				<LeftSidebar />
-				<RightSidebar />
+				<LeftSidebar className='is-phone-hidden' />
+				<RightSidebar className='is-phone-hidden' />
 				<div className='center'>
 				{children}
 				</div>

@@ -40,8 +40,8 @@ export const GlobalStyles = createGlobalStyle`
 
   @media ${phone} {
     html {
-      // 7px
-      font-size: 43.75%;
+      // 10px
+      font-size: 62.5%;
     }
   }
   

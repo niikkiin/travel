@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 
-import { helpers } from 'utilities/styles/helpers.styles';
+import { helpers, breakpoints } from 'utilities/styles/helpers.styles';
 
 const { secondaryColor } = helpers;
+
+const {  phone } = breakpoints;
 
 export const SiteLayoutContainer = styled.div`
 	.scroll-main {
@@ -15,6 +17,13 @@ export const SiteLayoutContainer = styled.div`
 	}
 	.center {
 		margin: 2vh 27.5%;
+	}
+
+	// NOTE DESKTOP IS DEFAULT
+	@media ${phone} {
+		.center {
+			margin: 2vh 1%;
+		}
 	}
 `;
 

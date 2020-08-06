@@ -16,7 +16,6 @@ import { connect } from 'react-redux';
 import CreatePost from 'components/create-post/create-post.component';
 import Posts from 'components/posts/posts.component';
 
-
 // const PostItem = React.lazy(() => import('components/post-item/post-item.component'));
 
 const MainFeed = ({ hidden }) => {
@@ -99,7 +98,7 @@ const MainFeed = ({ hidden }) => {
 					imageURI={imageURI}
 				/>
 			) : null}
-			Main Feed
+			<div className='title'>Main Feed</div>
 			<Posts posts={posts} />
 		</MainFeedContainer>
 	);

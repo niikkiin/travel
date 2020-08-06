@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 
-import { helpers } from 'utilities/styles/helpers.styles';
+import { helpers, breakpoints } from 'utilities/styles/helpers.styles';
 const { primaryColor, secondaryColor, textColor1 } = helpers;
+
+const {  phone } = breakpoints;
 
 export const HeaderContainer = styled.header`
 	background-color: ${primaryColor};
@@ -39,5 +41,10 @@ export const HeaderContainer = styled.header`
 	}
 	.profile-preview {
 		padding: 2rem;
+	}
+
+	// NOTE DESKTOP IS DEFAULT 
+	@media ${phone} {
+		display: none;
 	}
 `;

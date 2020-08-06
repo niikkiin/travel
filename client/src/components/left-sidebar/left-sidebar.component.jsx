@@ -8,7 +8,7 @@ import {
 
 export const LeftSidebar = () => {
   return (
-    <LeftSidebarContainer>
+    <LeftSidebarContainer className='is-phone-hidden'>
       <StaticBoxes />
     </LeftSidebarContainer>
   )

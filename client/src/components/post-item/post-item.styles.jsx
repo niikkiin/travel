@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 
-import { helpers } from 'utilities/styles/helpers.styles';
+import { helpers, breakpoints } from 'utilities/styles/helpers.styles';
 const { secondaryColor, accentColor, successColor, accentShade, textColor1, textColor2 } = helpers;
+
+const { phone } = breakpoints;
 
 export const PostItemContainer = styled.div`
 	display: flex;
@@ -84,5 +86,23 @@ export const PostItemContainer = styled.div`
 		height: 100%;
 		width: 100%;
 		object-fit: cover;
+	}
+
+	@media ${phone} {
+		margin: 2rem 0;
+		.post-info {
+			margin: 1rem 1rem 0.5rem 6rem;
+		}
+
+		.card {
+			
+			.card-body {
+				p.post-title {
+					color: ${textColor2};
+					font-size: 2rem;
+					margin: 1rem 2rem 1.5rem 5rem;
+				}
+			}
+		}
 	}
 `;
