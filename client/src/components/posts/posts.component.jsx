@@ -15,7 +15,7 @@ const Posts = ({ posts, loading }) => {
 	return (
 		<PostsContainer>
 			{posts.map((post) => (
-				<LazyLoad key={post.id} height={100} offset={[-100, 100]} placeholder={null}>
+				<LazyLoad key={post.id} height={100} offset={[-100, 100]} placeholder={<div>Loading</div>}>
 					{/* {loading ? <PostItem key={post.id} {...post} /> : <div>Loading</div>} */}
 					<PostItem key={post.id} {...post} /> 
 				</LazyLoad>
