@@ -10,7 +10,7 @@ export const isImageLoadedReducer = (state= INITIAL_STATE, action) => {
     case IMAGE_LOADED:
       return {
         // ...state,
-        loading: !state.hidden
+        loading: true
       }
     default:
       return state;   

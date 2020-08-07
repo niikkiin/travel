@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import { helpers } from 'utilities/styles/helpers.styles';
 
-const { secondaryColor, accentColor } = helpers;
+const { secondaryColor, accentColor, warningColor } = helpers;
 
 export const CreatePostContainer = styled.div`
 	margin: 2rem 1.5rem;
@@ -23,6 +23,24 @@ export const CreatePostContainer = styled.div`
 	}
 	h3.title {
 		font-size: 1.5rem;
+	}
+	.caption-container {
+		position: relative;
+
+		.full-length-on-input {
+			border: 1px solid ${warningColor};
+		}
+	}
+	.caption-length {
+		font-size: 1rem;
+		color: ${accentColor};
+		position: absolute;
+		bottom: 24%;
+		right: 1%;
+
+		&.full-length {
+			color: ${warningColor};
+		}
 	}
 `;
 

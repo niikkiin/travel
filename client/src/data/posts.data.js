@@ -32,7 +32,7 @@ export const POST_DATA = [
 	{
 		id: 4,
 		postedBy: 'Mary Carrington',
-		avatar: profile3,
+		avatar: profile5,
 		businessName: "Jack's flight club",
 		time: '10m ago',
 		title: 'New tourist destination now with 10% discount',

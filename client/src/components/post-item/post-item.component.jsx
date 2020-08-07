@@ -6,8 +6,8 @@ import { withRouter } from 'react-router-dom';
 
 // loading
 import 'react-lazy-load-image-component/src/effects/blur.css';
-import LazyLoad from 'react-lazyload';
-import { Spinner } from 'components/spinner/spinner.component';
+// import LazyLoad from 'react-lazyload';
+// import { Spinner } from 'components/spinner/spinner.component';
 
 // redux
 import { isImageLoaded } from 'store/actions/image-loading.action';
@@ -29,9 +29,9 @@ const PostItem = ({ id, postedBy, avatar, businessName, time, title, thumbnail, 
 						<div className='card-body'>
 							<p className='post-title'>{title}</p>
 						</div>
-						<LazyLoad once placeholder={<Spinner />}>
+						{/* <LazyLoad once placeholder={<Spinner />}> */}
 							<img className='card-img' alt={title} effect='blur' src={thumbnail} />
-						</LazyLoad>
+						{/* </LazyLoad> */}
 					</div>
 				</>
 			) : (

@@ -39,6 +39,7 @@ const CreatePost = ({
 	setZoom,
 	toggleCreatePost,
 }) => {
+	const MAX_LENGTH = 64;
 	return (
 		<CreatePostContainer className={isClosed ? 'is-closed' : ''}>
 			<HeaderCreatePost>
@@ -47,16 +48,21 @@ const CreatePost = ({
 					&#10005;
 				</div>
 			</HeaderCreatePost>
-			<form className='form' onSubmit={(e) => handlePostSubmit(e)} noValidate>
-				<FormInput
-					name='caption'
-					type='text'
-					handleChange={(e) => handlePostChange(e)}
-					value={caption}
-					label='Your Caption'
-					id='caption'
-					required
-				/>
+			<form className='form' onSubmit={(e) => handlePostSubmit(e)}>
+				<div className='caption-container'>
+					<div className={caption.length === MAX_LENGTH ? 'caption-length full-length' : 'caption-length'}>{caption.length} / {MAX_LENGTH}</div>
+					<FormInput
+						className={caption.length === MAX_LENGTH ? 'caption full-length-on-input' : 'caption'}
+						name='caption'
+						type='text'
+						handleChange={(e) => handlePostChange(e)}
+						value={caption}
+						label='Your Caption'
+						id='caption'
+						maxLength={MAX_LENGTH}
+						required
+					/>
+				</div>
 				<UploadImageButton
 					name='imageURI'
 					type='file'

@@ -23,9 +23,9 @@ export const HeaderContainer = styled.header`
   display: flex;
 	justify-content: space-between;
 	
-	position: fixed;
-	top: 0;
-	left: 0;
+	// position: fixed;
+	// top: 0;
+	// left: 0;
 
 
 	.logo {

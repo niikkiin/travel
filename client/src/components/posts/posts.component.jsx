@@ -1,24 +1,26 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 
 // styled components
 import { PostsContainer } from 'components/posts/posts.styles';
 
 // components
-import PostItem from 'components/post-item/post-item.component';
+// import PostItem from 'components/post-item/post-item.component';
 
 // lazy load
-import LazyLoad from 'react-lazyload';
+// import LazyLoad from 'react-lazyload';
 // import { Spinner } from 'components/spinner/spinner.component';
 import { connect } from 'react-redux';
+import { Spinner } from 'components/spinner/spinner.component';
+
+const PostItem = React.lazy(() => import('components/post-item/post-item.component'));
 
 const Posts = ({ posts, loading }) => {
 	return (
 		<PostsContainer>
 			{posts.map((post) => (
-				<LazyLoad key={post.id} height={100} offset={[-100, 100]} placeholder={<div>Loading</div>}>
-					{/* {loading ? <PostItem key={post.id} {...post} /> : <div>Loading</div>} */}
+					<Suspense key={post.id} fallback={<Spinner />}>
 					<PostItem key={post.id} {...post} /> 
-				</LazyLoad>
+					</Suspense>
 			))}
 		</PostsContainer>
 	);

@@ -74,9 +74,11 @@ export const PostItemContainer = styled.div`
 	}
 	.card .card-body {
 		p.post-title {
+			// min-height: 15rem;
 			color: ${textColor2};
 			font-size: 2.5rem;
 			margin: 2rem 2rem 1.5rem 9rem;
+			word-break: break-all;
 		}
 	}
 	.card span.lazy-load-image-background {
