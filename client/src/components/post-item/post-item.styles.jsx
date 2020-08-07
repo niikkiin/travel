@@ -19,6 +19,8 @@ export const PostItemContainer = styled.div`
 }
 
 	.avatar {
+		z-index: 999;
+		cursor: pointer;
 		width: 5.6rem;
 		height: 5.6rem;
 		-webkit-border-radius: 60px;

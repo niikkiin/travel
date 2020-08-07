@@ -33,7 +33,7 @@ const HeaderNavigation = ({ toggleCreatePost }) => {
 				// className={`icon ${isNavItemActive ? 'nav-active' : ''}`}
 				onClick={toggleCreatePost}
 			/>
-			<NavLink activeClassName='is-active' exact to='/profile'>
+			<NavLink activeClassName='is-active' exact to='/profile/me'>
 				<Icon icon={compass2Icon} className='icon' />
 			</NavLink>
 			<NavLink activeClassName='is-active' exact to='/likes'>

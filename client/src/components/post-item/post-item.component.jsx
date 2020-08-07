@@ -18,10 +18,16 @@ const PostItem = ({ id, postedBy, avatar, businessName, time, title, thumbnail, 
 		<PostItemContainer>
 			{loading ? (
 				<>
-					<div className='avatar' style={{ backgroundImage: 'url(' + avatar + ')' }}></div>
+					<div
+						onClick={() => history.push(`/profile/${id}`)}
+						className='avatar'
+						style={{ backgroundImage: 'url(' + avatar + ')' }}
+					></div>
 					<div className='post-info'>
 						<span className='posted-by-text'>Posted by </span>
-						<span className='posted-by link'>{postedBy}</span>
+						<span className='posted-by link' onClick={() => history.push(`/profile/${id}`)}>
+							{postedBy}
+						</span>
 						<span className='post-from-text'> from </span>
 						<span className='location link'>{businessName}</span> <span className='time'>{time}</span>
 					</div>
@@ -30,14 +36,12 @@ const PostItem = ({ id, postedBy, avatar, businessName, time, title, thumbnail, 
 							<p className='post-title'>{title}</p>
 						</div>
 						{/* <LazyLoad once placeholder={<Spinner />}> */}
-							<img className='card-img' alt={title} effect='blur' src={thumbnail} />
+						<img className='card-img' alt={title} effect='blur' src={thumbnail} />
 						{/* </LazyLoad> */}
 					</div>
 				</>
-			) : (
-				// <Spinner />
-				null
-			)}
+			) : // <Spinner />
+			null}
 			<img
 				onLoad={isImageLoaded}
 				style={{ display: 'none' }}

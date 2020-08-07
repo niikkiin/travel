@@ -14,6 +14,7 @@ import EditProfilePage from 'pages/site/edit-profile/edit-profile.component';
 import { ChangePassword } from 'pages/site/change-password/change-password.component';
 import DashboardPage from 'pages/admin/dashboard/dashboard.component';
 import UserTab from 'pages/admin/user-tab/user-tab.component';
+import OtherUserProfile from 'pages/site/other-user-profile/other-user-profile.component';
 
 export default [
 	{
@@ -29,12 +30,6 @@ export default [
 		component: MessagingPage,
 	},
 	{
-		path: '/profile',
-		exact: true,
-		layout: SiteLayout,
-		component: ProfilePage,
-	},
-	{
 		path: '/likes',
 		exact: true,
 		layout: SiteLayout,
@@ -45,6 +40,19 @@ export default [
 		exact: true,
 		layout: SiteLayout,
 		component: DetailMessage,
+	},
+	// SECTION PROFILE
+	{
+		path: '/profile/me',
+		exact: true,
+		layout: SiteLayout,
+		component: ProfilePage,
+	},
+	{
+		path: '/profile/:id',
+		exact: true,
+		layout: SiteLayout,
+		component: OtherUserProfile,
 	},
 	// SECTION REGISTRATION
 	{
