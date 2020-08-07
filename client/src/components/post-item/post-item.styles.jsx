@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import { helpers, breakpoints } from 'utilities/styles/helpers.styles';
-const { secondaryColor, accentColor, successColor, accentShade, textColor1, textColor2 } = helpers;
+const { primaryColor, secondaryColor, accentColor, successColor, accentShade, textColor1, textColor2 } = helpers;
 
 const { phone } = breakpoints;
 
@@ -73,12 +73,14 @@ export const PostItemContainer = styled.div`
 	.card {
 		border: solid 1px ${secondaryColor};
 		cursor: pointer;
+		background-color: ${primaryColor};
 	}
 	.card .card-body {
 		p.post-title {
 			// min-height: 15rem;
 			font-weight: bold;
 			color: ${textColor2};
+			background-color: ${primaryColor};
 			font-size: 2.3rem;
 			min-height: 6rem;
 			display: flex;

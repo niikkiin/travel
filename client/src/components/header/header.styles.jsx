@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
 import { helpers, breakpoints } from 'utilities/styles/helpers.styles';
-const { primaryColor, secondaryColor, textColor1 } = helpers;
+const { primaryColorLight, secondaryColor, textColor1 } = helpers;
 
 const {  phone } = breakpoints;
 
 export const HeaderContainer = styled.header`
-	background-color: ${primaryColor};
+	background-color: ${primaryColorLight};
 	border-bottom: 1px solid ${secondaryColor};
 	display: block;
 	height: 8vh;
