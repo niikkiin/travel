@@ -5,7 +5,7 @@ import { breakpoints } from 'utilities/styles/helpers.styles';
 const { phone } = breakpoints;
 
 export const MessengerContainer = styled.div`
-	margin: 0 -3.5rem 0 -2rem;
+	margin: 0 -2rem 0 -2rem;
 	margin-top: 1.5rem;
 	font-size: 2rem;
 	display: grid;

@@ -9,11 +9,11 @@ const {  phone } = breakpoints;
 export const SiteLayoutContainer = styled.div`
 	.scroll-main {
 		height: 92vh;
-		overflow-y: scroll;
+		overflow-y: auto;
 	}
 	.center,
 	.bodywrap {
-		height: 100%;
+		// height: 100%;
 	}
 	.center {
 		margin: 2vh 27.5%;
