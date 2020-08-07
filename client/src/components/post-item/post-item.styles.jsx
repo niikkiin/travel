@@ -10,7 +10,6 @@ export const PostItemContainer = styled.div`
 	flex-direction: column;
 	position: relative;
 	margin: 5rem 0;
-	cursor: pointer;
 
 .post-avatar {
 	width: 5.6rem;
@@ -71,6 +70,7 @@ export const PostItemContainer = styled.div`
 	}
 	.card {
 		border: solid 1px ${secondaryColor};
+		cursor: pointer;
 	}
 	.card .card-body {
 		p.post-title {

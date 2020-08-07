@@ -15,7 +15,7 @@ import { connect } from 'react-redux';
 
 const PostItem = ({ id, postedBy, avatar, businessName, time, title, thumbnail, isImageLoaded, loading, history }) => {
 	return (
-		<PostItemContainer onClick={() => history.push(`/details/${id}`)}>
+		<PostItemContainer>
 			{loading ? (
 				<>
 					<div className='avatar' style={{ backgroundImage: 'url(' + avatar + ')' }}></div>
@@ -25,7 +25,7 @@ const PostItem = ({ id, postedBy, avatar, businessName, time, title, thumbnail, 
 						<span className='post-from-text'> from </span>
 						<span className='location link'>{businessName}</span> <span className='time'>{time}</span>
 					</div>
-					<div className='card'>
+					<div className='card' onClick={() => history.push(`/details/${id}`)}>
 						<div className='card-body'>
 							<p className='post-title'>{title}</p>
 						</div>
