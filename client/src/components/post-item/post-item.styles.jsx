@@ -48,7 +48,7 @@ export const PostItemContainer = styled.div`
 	.post-info {
 		font-size: 1.2rem;
 		font-weight: 500;
-		margin: 1rem 1rem 1rem 7rem;
+		margin: 1rem 1rem 1rem 5.5rem;
 		.posted-by-text,
 		.post-from-text {
 			color: ${textColor1};
@@ -77,10 +77,14 @@ export const PostItemContainer = styled.div`
 	.card .card-body {
 		p.post-title {
 			// min-height: 15rem;
+			font-weight: bold;
 			color: ${textColor2};
-			font-size: 2.5rem;
-			margin: 2rem 2rem 1.5rem 9rem;
-			word-break: break-all;
+			font-size: 2.3rem;
+			min-height: 6rem;
+			display: flex;
+			align-items: center;
+			margin: 1.5rem 1.5rem 1.5rem 6rem;
+			word-break: break-word;
 		}
 	}
 	.card span.lazy-load-image-background {
