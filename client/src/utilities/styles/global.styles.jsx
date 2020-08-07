@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 import { helpers, breakpoints } from './helpers.styles';
 
 
-const { primaryColor, textColor1 } = helpers;
+const { primaryColorLight, textColor1 } = helpers;
 const {  phone, tabletLandscape, tabletPortrait, highResDesktop } = breakpoints;
 
 export const GlobalStyles = createGlobalStyle`
@@ -23,7 +23,7 @@ export const GlobalStyles = createGlobalStyle`
     // min-height: 100vh;
     box-sizing: border-box;
     font-family: 'Muli', sans-serif;
-    background-color: ${primaryColor};
+    background-color: ${primaryColorLight};
     color: ${textColor1};
   }
 
