@@ -3,7 +3,8 @@ import { css } from 'styled-components';
  * Helper styles and themes for global usage
  */
 export const helpers = {
-  primaryColor: '#FAFAFA',
+  primaryColor: '#FFFFFF',
+  // primaryColor: '#FAFAFA',
   // secondaryColor: '#ECECEC',
 	secondaryColor: '#d0d0d0',
 	lightSecondaryColor: '#EDEDED',
