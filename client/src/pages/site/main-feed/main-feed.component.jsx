@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, Suspense } from 'react';
 
 import { MainFeedContainer } from 'pages/site/main-feed/main-feed.styles';
 
@@ -14,9 +14,10 @@ import getCroppedImg from 'utilities/crop-image/crop-image.utility';
 // components
 import { connect } from 'react-redux';
 import CreatePost from 'components/create-post/create-post.component';
-import Posts from 'components/posts/posts.component';
+// import Posts from 'components/posts/posts.component';
+import { Spinner } from 'components/spinner/spinner.component';
 
-// const PostItem = React.lazy(() => import('components/post-item/post-item.component'));
+const Posts = React.lazy(() => import('components/posts/posts.component'));
 
 const MainFeed = ({ hidden }) => {
 	const [posts, setPosts] = useState(POST_DATA);
@@ -99,7 +100,9 @@ const MainFeed = ({ hidden }) => {
 				/>
 			) : null}
 			<div className='title'>Main Feed</div>
-			<Posts posts={posts} />
+			<Suspense fallback={<Spinner />}>
+				<Posts posts={posts} />
+			</Suspense>
 		</MainFeedContainer>
 	);
 };
