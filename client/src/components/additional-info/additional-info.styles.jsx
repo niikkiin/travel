@@ -15,6 +15,7 @@ export const AdditionalInfoContainer = styled.div`
 
   .additional-inputs {
     flex: 1;
+    margin-left: 1rem;
   }
 }
 .profile-avatar {
@@ -47,8 +48,8 @@ export const AdditionalInfoContainer = styled.div`
     transform: scale(0);
     width: 11rem;
     position: absolute;
-    top: 30%;
-    left: -3%;
+    top: 45%;
+    left: -4.5%;
     height: 3rem;
     display: flex;
     flex-direction: column;

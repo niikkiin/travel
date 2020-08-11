@@ -21,6 +21,7 @@ import PrivacyAndSecurity from 'pages/site/privacy-and-security/privacy-and-secu
 import ManageContacts from 'pages/site/manage-contacts/manage-contacts.component';
 import LoginActivity from 'pages/site/login-activity/login-activity.component';
 import NewSignUp from 'pages/site/new-sign-up/new-sign-up.component';
+import RegistrationTwoLayout from 'layouts/registration-two.layout';
 
 export default [
 	{
@@ -76,7 +77,7 @@ export default [
 	{
 		path: '/register2',
 		exact: true,
-		layout: RegistrationLayout,
+		layout: RegistrationTwoLayout,
 		component: NewSignUp,
 	},
 	{

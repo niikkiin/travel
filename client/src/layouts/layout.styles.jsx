@@ -37,6 +37,21 @@ export const RegistrationContainer = styled.div`
 	height: 100vh;
 	.registration-box {
 		padding: 4rem;
+		width: 40rem;
+		border: 1px solid ${secondaryColor};
+		position: relative;
+	}
+`;
+export const RegistrationTwoContainer = styled.div`
+	display: -ms-flexbox;
+	display: grid;
+	-ms-flex-pack: center;
+	align-items: center;
+
+	place-items: center;
+	height: 100vh;
+	.registration-box {
+		padding: 4rem;
 		width: 80rem;
 		border: 1px solid ${secondaryColor};
 		min-height: 80vh;

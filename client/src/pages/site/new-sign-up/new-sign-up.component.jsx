@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { makeStyles, withStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
 
-import { Stepper, Step, StepLabel, StepConnector } from '@material-ui/core';
+import { Stepper, Step, StepLabel } from '@material-ui/core';
 
 // styled components
 import { SignUpPageContainer } from 'pages/site/new-sign-up/new-sign-up.styles';
@@ -15,7 +15,6 @@ import { helpers } from 'utilities/styles/helpers.styles';
 
 // components
 import { CustomButton } from 'components/custom-button/custom-button.component';
-import ChooseAccountType from 'components/choose-account-type/choose-account-type.component';
 import RegisterForm from 'components/register-form/register-form.component';
 import AdditionalInfo from 'components/additional-info/additional-info.component';
 
@@ -24,6 +23,7 @@ import { Link } from 'react-router-dom';
 
 // images
 import defaultAvatar from 'assets/default_avatar.png';
+import ChooseTags from 'components/choose-tags/choose-tags.component';
 
 // color
 const { accentColor } = helpers;
@@ -115,18 +115,22 @@ const NewSignUp = () => {
 	const getStepContent = (step) => {
 		switch (step) {
 			case 0:
-				return <ChooseAccountType handleRadioChange={handleRadioChange} />;
+				return <RegisterForm handleRadioChange={handleRadioChange} formData={formData} />;
 			case 1:
-				return <RegisterForm formData={formData} handleChange={handleChange} />;
-			case 2:
 				return (
 					<AdditionalInfo
 						formData={formData}
 						handleChange={handleChange}
 						handleProfilePicChange={handleProfilePicChange}
+					/>
+				);
+			case 2:
+				return (
+					<ChooseTags
+						removeTag={removeTag}
+						formData={formData}
 						updateQuery={updateQuery}
 						keyPressed={keyPressed}
-						removeTag={removeTag}
 					/>
 				);
 			default:
@@ -137,13 +141,20 @@ const NewSignUp = () => {
 	return (
 		<SignUpPageContainer>
 			<h1 className='title'>Sign Up</h1>
-			<Stepper alternativeLabel activeStep={activeStep} connector={<ColorlibConnector />}>
+			<Stepper alternativeLabel activeStep={activeStep}>
+				{steps.map((label) => (
+					<Step key={label}>
+						<StepLabel>{label}</StepLabel>
+					</Step>
+				))}
+			</Stepper>
+			{/* <Stepper alternativeLabel activeStep={activeStep} connector={<ColorlibConnector />}>
 				{steps.map((label) => (
 					<Step key={label}>
 						<StepLabel StepIconComponent={ColorlibStepIcon}>{label}</StepLabel>
 					</Step>
 				))}
-			</Stepper>
+			</Stepper> */}
 
 			<>
 				{activeStep === steps.length ? (
@@ -178,27 +189,27 @@ const NewSignUp = () => {
 };
 
 // SECTION STEPPER STYLES
-const ColorlibConnector = withStyles({
-	alternativeLabel: {
-		top: 22,
-	},
-	active: {
-		'& $line': {
-			backgroundColor: accentColor,
-		},
-	},
-	completed: {
-		'& $line': {
-			backgroundColor: accentColor,
-		},
-	},
-	line: {
-		height: 3,
-		border: 0,
-		backgroundColor: '#eaeaf0',
-		borderRadius: 1,
-	},
-})(StepConnector);
+// const ColorlibConnector = withStyles({
+// 	alternativeLabel: {
+// 		top: 22,
+// 	},
+// 	active: {
+// 		'& $line': {
+// 			backgroundColor: accentColor,
+// 		},
+// 	},
+// 	completed: {
+// 		'& $line': {
+// 			backgroundColor: accentColor,
+// 		},
+// 	},
+// 	line: {
+// 		height: 3,
+// 		border: 0,
+// 		backgroundColor: '#eaeaf0',
+// 		borderRadius: 1,
+// 	},
+// })(StepConnector);
 
 const useColorlibStepIconStyles = makeStyles({
 	root: {
