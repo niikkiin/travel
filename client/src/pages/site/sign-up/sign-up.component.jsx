@@ -6,7 +6,6 @@ import { SignUpPageContainer } from 'pages/site/sign-up/sign-up.styles';
 // components
 import { FormInput } from 'components/form-input/form-input.component';
 import { CustomButton } from 'components/custom-button/custom-button.component';
-import { Link } from 'react-router-dom';
 import { RadioButton } from 'components/radio-button/radio-button.component';
 
 export const SignUpPage = () => {
@@ -165,7 +164,7 @@ export const SignUpPage = () => {
 	};
 	return (
 		<SignUpPageContainer>
-			<h1 className='title'>Sign Up</h1>
+
 			<div className='user-type'>
 				<div className='helper-text'>Choose your account type</div>
 				<div className='user-type-selection'>
@@ -184,12 +183,6 @@ export const SignUpPage = () => {
 				</div>
 			</div>
 			{userType ? getFormType(userType) : null}
-			<div className='link-to-login'>
-				Already have an account?{' '}
-				<Link to='/login' className='login'>
-					Login here
-				</Link>
-			</div>
 		</SignUpPageContainer>
 	);
 };

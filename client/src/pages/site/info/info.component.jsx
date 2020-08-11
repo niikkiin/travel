@@ -11,9 +11,6 @@ import { CustomButton } from 'components/custom-button/custom-button.component';
 
 // react-select
 import Select from 'react-select';
-import CreateSelect from 'react-select/creatable';
-
-import makeAnimated from 'react-select/animated';
 
 // images
 import defaultAvatar from 'assets/default_avatar.png';
@@ -22,22 +19,49 @@ import defaultAvatar from 'assets/default_avatar.png';
 import { InlineIcon } from '@iconify/react';
 import cameraIcon from '@iconify/icons-bytesize/camera';
 
-const animatedComponents = makeAnimated();
-
 export const InfoPage = () => {
 	const [formData, setFormData] = useState({
 		avatar: defaultAvatar,
 		website: '',
 		phoneNumber: '',
 		serviceArea: '',
-		travelTags: [{ value: 'Travel Agent', label: 'Travel Agent', color: '#00B8D9' }],
 		address: '',
+		tag: '',
+		travelTags: [],
 	});
 
-	const { avatar, website, phoneNumber, address } = formData;
+	const { avatar, website, phoneNumber, address, tag, travelTags } = formData;
+
+	const TAG_MAX_LENGTH = 15;
 
 	const handleChange = (e) => {
 		setFormData({ ...formData, [e.target.name]: e.target.value });
+	};
+
+	const handleClick = () => {
+		setFormData({...formData, travelTags: [...formData.travelTags, tag]});
+	};
+	
+	const updateQuery = ({ target }) => {
+		// Update query onKeyPress of input box
+		// setTag(target.value)
+		setFormData({ ...formData, tag: target.value });
+	};
+	
+
+	const removeTag = (e) => {
+		const toRemove = e.target.value;
+		const name = travelTags.filter((item) => item !== e.target.value);
+		console.log("newlist", name, "item", toRemove);
+		// setFormData({...formData, });
+	};
+
+	const keyPressed = ({ key }) => {
+		// Capture search on Enter key
+		if (key === 'Enter') {
+			handleClick();
+			// setFormData({ ...formData, tag: '' });
+		}
 	};
 
 	const handleProfilePicChange = (e) => {
@@ -50,10 +74,6 @@ export const InfoPage = () => {
 		reader.readAsDataURL(e.target.files[0]);
 	};
 
-	// const handleSelectChange = (e) => {
-	// 	console.log(e.target.value);
-	// }
-
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		// setFormData({ ...formData, travelTags: tags });
@@ -64,11 +84,6 @@ export const InfoPage = () => {
 		{ value: 'regional', label: 'Regional' },
 		{ value: 'local', label: 'Local' },
 	];
-	const travelTagSuggestions = [
-		{ value: 'Travel Agent', label: 'Travel Agent', color: '#00B8D9' },
-		{ value: 'Discount Flights', label: 'Discount Flights', color: '#0052CC' },
-	];
-	const initialtravelTagValue = [{ value: 'Travel Agent', label: 'Travel Agent', color: '#00B8D9' }];
 
 	return (
 		<InfoPageContainer>
@@ -119,18 +134,33 @@ export const InfoPage = () => {
 				/>
 
 				<div className='travel-tags'>
-					<div className='tag-label'>Travel Tags</div>
-					<CreateSelect
-						placeholder='Type to create new tag and enter'
-						options={travelTagSuggestions}
-						// menuIsOpen={false}
-						components={animatedComponents}
-						closeMenuOnSelect={true}
-						defaultValue={initialtravelTagValue}
-						defaultInputValue='travel'
-						// value={travelTags}
-						isMulti
-					/>
+					{travelTags.length === 10 ? <div className='tag-error'>Max of ten tags</div> : null}
+					<div className='tag-input-container'>
+						<FormInput
+							className={travelTags.length === 10 ? 'tag-input disable' : 'tag-input '}
+							disabled={travelTags.length === 10 ? true : false}
+							label='Travel Tags'
+							type='text'
+							maxLength={TAG_MAX_LENGTH}
+							onChange={updateQuery}
+							onKeyPress={keyPressed}
+							value={tag}
+						/>
+
+						<div className={tag.length === TAG_MAX_LENGTH ? 'tag-length full-length' : 'tag-length'}>
+							{tag.length} / {TAG_MAX_LENGTH}
+						</div>
+					</div>
+					<div className='tag-lists'>
+						{travelTags.map((tag, i) => (
+							<li className='tag-list' key={i}>
+								<div className='tag-container'>{tag}</div>
+								<button className='remove-mark' value={tag} onClick={removeTag}>
+									&#215;
+								</button>
+							</li>
+						))}
+					</div>
 				</div>
 
 				<div className='btn-container'>

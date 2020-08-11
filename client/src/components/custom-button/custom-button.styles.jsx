@@ -15,11 +15,14 @@ export const CustomButtonContainer = styled.button`
 	font-weight: 400;
 	cursor: pointer;
 	transition: all 0.3s ease;
-	color: #fff;
+	color: ${accentColor};
 	border: 1px solid ${accentColor};
 	background-color: transparent;
+	outline: none;
+
 	&:hover {
-		color: ${accentColor};
+		color: #fff;
+		background-color: ${accentColor};
 		border: 1px solid ${accentColor};
 	}
 	&.submit-btn {
@@ -41,5 +44,25 @@ export const CustomButtonContainer = styled.button`
       background-color: ${secondaryColor};
       border: 1px solid ${secondaryColor};
     }
-  }
+	}
+	
+	
+	&.opaque {
+		color: ${secondaryColor};
+		border: none;
+
+		&:hover {
+			background-color: transparent;
+			color: ${accentColor};
+		}
+
+		&:disabled {
+			background-color: transparent;
+
+			&:hover {
+				border: none;
+				color: ${secondaryColor};
+			}
+		}
+	}
 `;

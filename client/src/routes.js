@@ -15,6 +15,12 @@ import { ChangePassword } from 'pages/site/change-password/change-password.compo
 import DashboardPage from 'pages/admin/dashboard/dashboard.component';
 import UserTab from 'pages/admin/user-tab/user-tab.component';
 import OtherUserProfile from 'pages/site/other-user-profile/other-user-profile.component';
+import EmailAndSms from 'pages/site/email-and-sms/email-and-sms.component';
+import PushNotification from 'pages/site/push-notification/push-notification.component';
+import PrivacyAndSecurity from 'pages/site/privacy-and-security/privacy-and-security.component';
+import ManageContacts from 'pages/site/manage-contacts/manage-contacts.component';
+import LoginActivity from 'pages/site/login-activity/login-activity.component';
+import NewSignUp from 'pages/site/new-sign-up/new-sign-up.component';
 
 export default [
 	{
@@ -68,6 +74,12 @@ export default [
 		component: SignUpPage,
 	},
 	{
+		path: '/register2',
+		exact: true,
+		layout: RegistrationLayout,
+		component: NewSignUp,
+	},
+	{
 		path: '/info',
 		exact: true,
 		layout: RegistrationLayout,
@@ -85,6 +97,36 @@ export default [
 		exact: true,
 		layout: AccountLayout,
 		component: ChangePassword,
+	},
+	{
+		path: '/email',
+		exact: true,
+		layout: AccountLayout,
+		component: EmailAndSms,
+	},
+	{
+		path: '/notifications',
+		exact: true,
+		layout: AccountLayout,
+		component: PushNotification,
+	},
+	{
+		path: '/manage-contacts',
+		exact: true,
+		layout: AccountLayout,
+		component: ManageContacts,
+	},
+	{
+		path: '/privacy',
+		exact: true,
+		layout: AccountLayout,
+		component: PrivacyAndSecurity,
+	},
+	{
+		path: '/login-activity',
+		exact: true,
+		layout: AccountLayout,
+		component: LoginActivity,
 	},
 	// SECTION ADMIN
 	{

@@ -37,8 +37,10 @@ export const RegistrationContainer = styled.div`
 	height: 100vh;
 	.registration-box {
 		padding: 4rem;
-		width: 40rem;
+		width: 80rem;
 		border: 1px solid ${secondaryColor};
+		min-height: 80vh;
+		position: relative;
 	}
 `;
 
@@ -63,6 +65,7 @@ export const AccountContainer = styled.div`
 		.profile-contents {
 			padding: 2rem 4rem;
 			border-left: 1px solid ${secondaryColor};
+			min-height: 80vh;
 		}
 	}
 `;

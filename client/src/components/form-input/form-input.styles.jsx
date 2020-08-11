@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import { helpers, shrinkLabelStyles } from 'utilities/styles/helpers.styles';
 
-const { accentColor, secondaryColor, textColor1 } = helpers;
+const { accentColor, secondaryColor, textColor1, warningColor } = helpers;
 
 export const FormInputContainer = styled.div`
 	position: relative;
@@ -19,13 +19,21 @@ export const Input = styled.input`
 	padding: 0.8rem;
 	display: block;
 	width: 100%;
-  border: 1px solid ${secondaryColor};
+	border: 1px solid ${secondaryColor};
+	transition: all 0.5s ease;
+
 	&:focus {
-    outline: none;
+		outline: none;
     border: 1px solid ${accentColor};
 	}
 	&:focus ~ label {
 		${shrinkLabelStyles};
+	}
+
+	&:disabled {
+		cursor: not-allowed;
+		opacity: 0.6;
+		border: 1px solid ${warningColor};
 	}
 `;
 

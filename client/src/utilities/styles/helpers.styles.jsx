@@ -15,6 +15,8 @@ export const helpers = {
 	textColor2: '#757575',
 	
 	successColor: '#8BC34A',
+	dangerColor: '#DE350B',
+	lightDangerColor: '#FFBDAD',
 	lightBlue: '#E1F5FE',
 	lightGreen: '#F1F8E9',
 
@@ -28,7 +30,6 @@ export const helpers = {
 
 	// unused yet
 	warningColor: '#E69316',
-	dangerColor: '#BE174E',
 	successHighlightColor: '#083623',
 
 	boxShadow: '10px 25px 45px 0px rgba(0,0,0,0.25)',
